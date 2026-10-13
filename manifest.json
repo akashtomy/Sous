@@ -1,0 +1,37 @@
+{
+  "name": "Sous",
+  "short_name": "Sous",
+  "description": "Your second-in-command in the kitchen: quick, healthy meal plans from what you already have.",
+  "id": "/Sous/",
+  "start_url": "/Sous/",
+  "scope": "/Sous/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#2F7D4F",
+  "background_color": "#FAF8F4",
+  "categories": [
+    "food",
+    "lifestyle",
+    "health"
+  ],
+  "icons": [
+    {
+      "src": "/Sous/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/Sous/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/Sous/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
