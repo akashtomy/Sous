@@ -79,9 +79,9 @@ export function friendlyAuthError(e: unknown): string {
   if (/invalid login credentials/i.test(msg)) return 'Wrong username or password.';
   if (/username_taken|already registered|already been registered|database error saving new user/i.test(msg))
     return 'That username is taken. Try another one.';
-  // Supabase validates (and refuses) the internal username address only when it tries to mail it,
-  // i.e. when "Confirm email" is still on.
-  if (/email not confirmed|confirm_email_on|email_address_invalid|email address .* is invalid/i.test(msg))
+  // Username accounts never need mail. These errors only appear when Supabase tries to send a
+  // confirmation email, i.e. when "Confirm email" is still on.
+  if (/email not confirmed|confirm_email_on|email_address_invalid|email address .* is invalid|over_email_send_rate_limit|email rate limit/i.test(msg))
     return 'Sign-up needs “Confirm email” turned off in Supabase (Authentication → Sign In / Providers → Email).';
   if (/PGRST202|could not find the function|schema cache/i.test(msg))
     return 'The Sous database isn’t set up yet. Run the SQL files in supabase/migrations in the Supabase SQL Editor.';

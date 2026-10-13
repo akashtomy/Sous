@@ -115,6 +115,7 @@ describe('Login', () => {
     const signUp = jest
       .fn()
       .mockRejectedValueOnce(new Error('Email address "akash27@users.sous.app" is invalid'))
+      .mockRejectedValueOnce(new Error('email rate limit exceeded'))
       .mockRejectedValueOnce(
         new Error('Could not find the function public.username_available(p_username) in the schema cache'),
       );
@@ -125,6 +126,8 @@ describe('Login', () => {
     await fireEvent.changeText(screen.getByLabelText('Password'), 'longenough');
     await fireEvent.changeText(screen.getByLabelText('Confirm password'), 'longenough');
     const submit = () => fireEvent.press(screen.getAllByRole('button', { name: 'Create account' })[1]);
+    await submit();
+    await waitFor(() => expect(screen.getByText(/turned off in Supabase/)).toBeTruthy());
     await submit();
     await waitFor(() => expect(screen.getByText(/turned off in Supabase/)).toBeTruthy());
     await submit();
