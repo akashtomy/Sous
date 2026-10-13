@@ -98,6 +98,39 @@ describe('Login', () => {
     expect(signIn).toHaveBeenCalledWith('riya', 'x');
   });
 
+  it('steers people who type an email towards a username', async () => {
+    const signUp = jest.fn();
+    useAuth.setState({ status: 'signedOut', signUp });
+    await render(<Login />);
+    await press('Create account');
+    await fireEvent.changeText(screen.getByLabelText('Username'), 'Akash27@gmail.com');
+    expect(screen.getByText('Pick a username, not an email. For example: akash27')).toBeTruthy();
+    await fireEvent.changeText(screen.getByLabelText('Password'), 'longenough');
+    await fireEvent.changeText(screen.getByLabelText('Confirm password'), 'longenough');
+    await fireEvent.press(screen.getAllByRole('button', { name: 'Create account' })[1]);
+    expect(signUp).not.toHaveBeenCalled();
+  });
+
+  it('explains Supabase setup problems instead of showing raw errors', async () => {
+    const signUp = jest
+      .fn()
+      .mockRejectedValueOnce(new Error('Email address "akash27@users.sous.app" is invalid'))
+      .mockRejectedValueOnce(
+        new Error('Could not find the function public.username_available(p_username) in the schema cache'),
+      );
+    useAuth.setState({ status: 'signedOut', signUp, isUsernameAvailable: async () => true });
+    await render(<Login />);
+    await press('Create account');
+    await fireEvent.changeText(screen.getByLabelText('Username'), 'akash27');
+    await fireEvent.changeText(screen.getByLabelText('Password'), 'longenough');
+    await fireEvent.changeText(screen.getByLabelText('Confirm password'), 'longenough');
+    const submit = () => fireEvent.press(screen.getAllByRole('button', { name: 'Create account' })[1]);
+    await submit();
+    await waitFor(() => expect(screen.getByText(/turned off in Supabase/)).toBeTruthy());
+    await submit();
+    await waitFor(() => expect(screen.getByText(/database isn’t set up yet/)).toBeTruthy());
+  });
+
   it('leaves the login screen once signed in', async () => {
     useAuth.setState({ status: 'signedIn' });
     await render(<Login />);

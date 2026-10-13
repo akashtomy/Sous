@@ -56,7 +56,7 @@ export default function Login() {
 
   const valid =
     mode === 'signin'
-      ? !!username && !!password
+      ? !!username && !!password && !username.includes('@')
       : !usernameProblem(username) &&
         !passwordProblem(password) &&
         password === confirmPw &&
@@ -77,9 +77,12 @@ export default function Login() {
   const submit = () =>
     run('form', () => (mode === 'signin' ? signIn(username, password) : signUp(username, password)));
 
-  const usernameHint =
-    mode !== 'signup' || !username
-      ? undefined
+  const usernameHint = !username
+    ? undefined
+    : mode !== 'signup'
+      ? username.includes('@') && uProblem
+        ? { text: uProblem, color: 'danger' as const }
+        : undefined
       : uProblem
         ? { text: uProblem, color: 'danger' as const }
         : availability === 'checking'

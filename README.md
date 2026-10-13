@@ -81,7 +81,7 @@ Usernames are 3–20 characters (letters, numbers, dots, underscores) and are no
 
 1. **Create a Supabase project** at [supabase.com](https://supabase.com) (the free tier is fine).
 2. **Create the database.** In the dashboard open *SQL Editor* and run each file in `supabase/migrations/` in name order: `20261012000000_households.sql`, then `20261013000000_usernames.sql`. With the Supabase CLI you can instead run `npx supabase link` and then `npx supabase db push`.
-3. **Turn off email confirmation.** In *Authentication → Sign In / Providers → Email*, switch **Confirm email** off. Usernames are stored as `username@users.sous.app`, an address that never receives mail, so confirmation links could never arrive.
+3. **Turn off email confirmation.** In *Authentication → Sign In / Providers → Email*, switch **Confirm email** off. Usernames are stored as `username@users.sous.app`, an address that never receives mail, so confirmation links could never arrive. For the same reason, leave Supabase's optional security notification emails (for example *Password changed*) off. Sign-up showing **Email address "…@users.sous.app" is invalid** means *Confirm email* is still on.
 4. **Connect the app.** Copy `.env.example` to `.env` and fill in the Project URL and the publishable key from *Project Settings → API*. Restart with `npx expo start -c`. These two values are safe to ship in the app because row-level security protects the data.
 5. **Allow the redirect URLs** (used by Google sign-in if you turn it on later). In *Authentication → URL Configuration* add your hosted web URL, `http://localhost:8081/**`, `sous://**` and `exp://**`.
 6. **Google sign-in (optional, off by default).** Set `EXPO_PUBLIC_FEATURE_GOOGLE_SIGNIN=true`, then:

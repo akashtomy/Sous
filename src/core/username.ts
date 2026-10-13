@@ -10,6 +10,13 @@ export function normaliseUsername(input: string): string {
 /** Why a username can't be used, or undefined when it's fine. */
 export function usernameProblem(input: string): string | undefined {
   const u = normaliseUsername(input);
+  if (u.includes('@')) {
+    // People reach for their email out of habit; suggest the part before the @ instead.
+    const suggestion = u.split('@')[0].replace(/[^a-z0-9._]/g, '').slice(0, 20);
+    return USERNAME_PATTERN.test(suggestion) && !/[._]{2}/.test(suggestion)
+      ? `Pick a username, not an email. For example: ${suggestion}`
+      : 'Pick a username, not an email.';
+  }
   if (u.length < 3) return 'At least 3 characters.';
   if (u.length > 20) return 'At most 20 characters.';
   if (!/^[a-z0-9]/.test(u)) return 'Start with a letter or number.';
