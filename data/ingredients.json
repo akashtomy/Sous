@@ -1,0 +1,4678 @@
+[
+ {
+  "id": "rice",
+  "name": "Rice (white)",
+  "aliases": [
+   "chawal",
+   "basmati",
+   "sona masoori",
+   "jasmine rice"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 356,
+   "protein": 7.9,
+   "carbs": 78,
+   "fat": 0.5,
+   "fiber": 2.8,
+   "sugar": 0.7
+  },
+  "packSizes": [
+   1000,
+   5000
+  ],
+  "defaultPar": 1000
+ },
+ {
+  "id": "brown-rice",
+  "name": "Brown / red rice",
+  "aliases": [
+   "matta rice",
+   "red rice",
+   "kerala rice"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 362,
+   "protein": 7.5,
+   "carbs": 76,
+   "fat": 2.7,
+   "fiber": 3.4,
+   "sugar": 0.8
+  },
+  "packSizes": [
+   500,
+   1000,
+   5000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "idli-rice",
+  "name": "Idli / parboiled rice",
+  "aliases": [
+   "parboiled rice",
+   "ukda chawal"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 350,
+   "protein": 7,
+   "carbs": 78,
+   "fat": 0.5,
+   "fiber": 2,
+   "sugar": 0.5
+  },
+  "packSizes": [
+   1000,
+   5000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "black-rice",
+  "name": "Black rice",
+  "aliases": [
+   "chak-hao",
+   "forbidden rice"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 356,
+   "protein": 8.9,
+   "carbs": 75,
+   "fat": 3.3,
+   "fiber": 4.9,
+   "sugar": 0.5
+  },
+  "packSizes": [
+   500,
+   1000,
+   5000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "poha",
+  "name": "Poha (flattened rice)",
+  "aliases": [
+   "chivda",
+   "aval",
+   "chura",
+   "flattened rice",
+   "beaten rice"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 350,
+   "protein": 6.6,
+   "carbs": 77,
+   "fat": 1.2,
+   "fiber": 2.5,
+   "sugar": 0.5
+  },
+  "packSizes": [
+   500,
+   1000,
+   5000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "puffed-rice",
+  "name": "Puffed rice",
+  "aliases": [
+   "murmura",
+   "muri",
+   "kurmura"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 390,
+   "protein": 7,
+   "carbs": 86,
+   "fat": 0.5,
+   "fiber": 1.7,
+   "sugar": 0.3
+  },
+  "packSizes": [
+   200,
+   500
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "atta",
+  "name": "Whole wheat flour",
+  "aliases": [
+   "atta",
+   "chapati flour",
+   "gehu atta"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 320,
+   "protein": 10.6,
+   "carbs": 64,
+   "fat": 1.5,
+   "fiber": 11.4,
+   "sugar": 1.8
+  },
+  "packSizes": [
+   1000,
+   5000
+  ],
+  "defaultPar": 1000
+ },
+ {
+  "id": "maida",
+  "name": "All-purpose flour",
+  "aliases": [
+   "maida",
+   "plain flour"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 364,
+   "protein": 10,
+   "carbs": 76,
+   "fat": 1,
+   "fiber": 2.7,
+   "sugar": 0.3
+  },
+  "packSizes": [
+   500,
+   1000,
+   5000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "semolina",
+  "name": "Semolina",
+  "aliases": [
+   "rava",
+   "suji",
+   "sooji"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 360,
+   "protein": 12.7,
+   "carbs": 73,
+   "fat": 1,
+   "fiber": 3.9,
+   "sugar": 0.5
+  },
+  "packSizes": [
+   500,
+   1000,
+   5000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "vermicelli",
+  "name": "Wheat vermicelli",
+  "aliases": [
+   "semiya",
+   "seviyan"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 356,
+   "protein": 12,
+   "carbs": 74,
+   "fat": 1.5,
+   "fiber": 3,
+   "sugar": 1
+  },
+  "packSizes": [
+   200,
+   500
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "oats",
+  "name": "Rolled oats",
+  "aliases": [
+   "oatmeal",
+   "porridge oats"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 379,
+   "protein": 13,
+   "carbs": 68,
+   "fat": 6.5,
+   "fiber": 10,
+   "sugar": 1
+  },
+  "packSizes": [
+   500,
+   1000,
+   5000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "ragi-flour",
+  "name": "Ragi flour",
+  "aliases": [
+   "finger millet",
+   "nachni",
+   "ragi"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 320,
+   "protein": 7.2,
+   "carbs": 67,
+   "fat": 1.9,
+   "fiber": 11.2,
+   "sugar": 0.3
+  },
+  "packSizes": [
+   500,
+   1000,
+   5000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "jowar-flour",
+  "name": "Jowar flour",
+  "aliases": [
+   "sorghum flour",
+   "jowar"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 334,
+   "protein": 10,
+   "carbs": 68,
+   "fat": 1.7,
+   "fiber": 10.2,
+   "sugar": 1.3
+  },
+  "packSizes": [
+   500,
+   1000,
+   5000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "bajra-flour",
+  "name": "Bajra flour",
+  "aliases": [
+   "pearl millet",
+   "bajra"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 348,
+   "protein": 11,
+   "carbs": 62,
+   "fat": 5.4,
+   "fiber": 11.5,
+   "sugar": 0.8
+  },
+  "packSizes": [
+   500,
+   1000,
+   5000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "besan",
+  "name": "Besan (gram flour)",
+  "aliases": [
+   "gram flour",
+   "chickpea flour",
+   "kadalai maavu"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 387,
+   "protein": 22.4,
+   "carbs": 58,
+   "fat": 6.7,
+   "fiber": 10.8,
+   "sugar": 10.9
+  },
+  "packSizes": [
+   500,
+   1000,
+   5000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "rice-flour",
+  "name": "Rice flour",
+  "aliases": [
+   "chawal ka atta",
+   "puttu podi"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 366,
+   "protein": 6,
+   "carbs": 80,
+   "fat": 1.4,
+   "fiber": 2.4,
+   "sugar": 0.1
+  },
+  "packSizes": [
+   500,
+   1000,
+   5000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "sabudana",
+  "name": "Sabudana (sago)",
+  "aliases": [
+   "sago",
+   "tapioca pearls"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 358,
+   "protein": 0.2,
+   "carbs": 89,
+   "fat": 0,
+   "fiber": 0.9,
+   "sugar": 3.4
+  },
+  "packSizes": [
+   250,
+   500
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "quinoa",
+  "name": "Quinoa",
+  "aliases": [],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 368,
+   "protein": 14,
+   "carbs": 64,
+   "fat": 6,
+   "fiber": 7,
+   "sugar": 0
+  },
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "bulgur",
+  "name": "Bulgur / dalia",
+  "aliases": [
+   "dalia",
+   "broken wheat",
+   "cracked wheat",
+   "burghul"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 342,
+   "protein": 12,
+   "carbs": 76,
+   "fat": 1.3,
+   "fiber": 12.5,
+   "sugar": 0.4
+  },
+  "packSizes": [
+   500,
+   1000,
+   5000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "couscous",
+  "name": "Couscous",
+  "aliases": [],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 376,
+   "protein": 12.8,
+   "carbs": 77,
+   "fat": 0.6,
+   "fiber": 5,
+   "sugar": 0
+  },
+  "packSizes": [
+   250,
+   500
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "ww-pasta",
+  "name": "Whole wheat pasta",
+  "aliases": [
+   "penne",
+   "spaghetti",
+   "fusilli"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 352,
+   "protein": 13.9,
+   "carbs": 75,
+   "fat": 2.5,
+   "fiber": 9,
+   "sugar": 2.7
+  },
+  "packSizes": [
+   500,
+   1000,
+   5000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "rice-noodles",
+  "name": "Rice noodles",
+  "aliases": [
+   "flat rice noodles",
+   "pho noodles"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 364,
+   "protein": 6,
+   "carbs": 80,
+   "fat": 0.6,
+   "fiber": 1.6,
+   "sugar": 0.1
+  },
+  "packSizes": [
+   200,
+   400
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "noodles",
+  "name": "Wheat noodles",
+  "aliases": [
+   "hakka noodles",
+   "egg noodles",
+   "udon"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 371,
+   "protein": 12,
+   "carbs": 74,
+   "fat": 2,
+   "fiber": 3,
+   "sugar": 2
+  },
+  "packSizes": [
+   200,
+   400
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "soba",
+  "name": "Soba noodles",
+  "aliases": [
+   "buckwheat noodles"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 336,
+   "protein": 14,
+   "carbs": 74.6,
+   "fat": 0.7,
+   "fiber": 3,
+   "sugar": 1
+  },
+  "packSizes": [
+   200,
+   400
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "cornmeal",
+  "name": "Cornmeal (makki atta)",
+  "aliases": [
+   "makki ka atta",
+   "maize flour",
+   "polenta"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 362,
+   "protein": 8.1,
+   "carbs": 76.9,
+   "fat": 3.6,
+   "fiber": 7.3,
+   "sugar": 0.6
+  },
+  "packSizes": [
+   500,
+   1000,
+   5000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "cornflour",
+  "name": "Cornflour (starch)",
+  "aliases": [
+   "corn starch",
+   "cornstarch"
+  ],
+  "category": "grain",
+  "unit": "g",
+  "per100": {
+   "kcal": 381,
+   "protein": 0.3,
+   "carbs": 91,
+   "fat": 0.1,
+   "fiber": 0.9,
+   "sugar": 0
+  },
+  "packSizes": [
+   100,
+   200
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "ww-bread",
+  "name": "Whole wheat bread",
+  "aliases": [
+   "brown bread",
+   "bread slice",
+   "multigrain bread"
+  ],
+  "category": "bakery",
+  "unit": "pc",
+  "gramsPerPc": 30,
+  "per100": {
+   "kcal": 252,
+   "protein": 12.5,
+   "carbs": 43,
+   "fat": 3.5,
+   "fiber": 6,
+   "sugar": 5.6
+  },
+  "perishableDays": 4,
+  "packSizes": [
+   10,
+   20
+  ],
+  "defaultPar": 4
+ },
+ {
+  "id": "pita",
+  "name": "Whole wheat pita",
+  "aliases": [
+   "khubz",
+   "arabic bread",
+   "pita bread"
+  ],
+  "category": "bakery",
+  "unit": "pc",
+  "gramsPerPc": 60,
+  "per100": {
+   "kcal": 266,
+   "protein": 9.8,
+   "carbs": 55,
+   "fat": 2.6,
+   "fiber": 7.4,
+   "sugar": 0.8
+  },
+  "perishableDays": 4,
+  "packSizes": [
+   4,
+   6
+  ],
+  "defaultPar": 2
+ },
+ {
+  "id": "tortilla",
+  "name": "Whole wheat tortilla",
+  "aliases": [
+   "wrap"
+  ],
+  "category": "bakery",
+  "unit": "pc",
+  "gramsPerPc": 45,
+  "per100": {
+   "kcal": 300,
+   "protein": 9,
+   "carbs": 48,
+   "fat": 8,
+   "fiber": 7,
+   "sugar": 2
+  },
+  "perishableDays": 4,
+  "packSizes": [
+   6,
+   8
+  ],
+  "defaultPar": 2
+ },
+ {
+  "id": "pav",
+  "name": "Pav (bread rolls)",
+  "aliases": [
+   "ladi pav",
+   "bun",
+   "dinner roll"
+  ],
+  "category": "bakery",
+  "unit": "pc",
+  "gramsPerPc": 40,
+  "per100": {
+   "kcal": 280,
+   "protein": 9,
+   "carbs": 50,
+   "fat": 4,
+   "fiber": 2.5,
+   "sugar": 5
+  },
+  "perishableDays": 4,
+  "packSizes": [
+   6,
+   12
+  ],
+  "defaultPar": 2
+ },
+ {
+  "id": "toor-dal",
+  "name": "Toor dal",
+  "aliases": [
+   "arhar dal",
+   "tuvar dal",
+   "pigeon pea",
+   "thuvaram paruppu",
+   "red gram"
+  ],
+  "category": "pulse",
+  "unit": "g",
+  "per100": {
+   "kcal": 331,
+   "protein": 21.7,
+   "carbs": 55,
+   "fat": 1.6,
+   "fiber": 9,
+   "sugar": 2
+  },
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 250
+ },
+ {
+  "id": "moong-dal",
+  "name": "Moong dal (split yellow)",
+  "aliases": [
+   "yellow moong",
+   "pasi paruppu",
+   "split mung"
+  ],
+  "category": "pulse",
+  "unit": "g",
+  "per100": {
+   "kcal": 326,
+   "protein": 23.9,
+   "carbs": 52.6,
+   "fat": 1.4,
+   "fiber": 9.4,
+   "sugar": 1
+  },
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "whole-moong",
+  "name": "Whole green moong",
+  "aliases": [
+   "green gram",
+   "mung beans",
+   "sabut moong",
+   "sprouts"
+  ],
+  "category": "pulse",
+  "unit": "g",
+  "per100": {
+   "kcal": 294,
+   "protein": 22.5,
+   "carbs": 46,
+   "fat": 1.1,
+   "fiber": 17,
+   "sugar": 0.5
+  },
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "urad-dal",
+  "name": "Urad dal (split)",
+  "aliases": [
+   "black gram dal",
+   "ulundu",
+   "white urad"
+  ],
+  "category": "pulse",
+  "unit": "g",
+  "per100": {
+   "kcal": 324,
+   "protein": 23,
+   "carbs": 51,
+   "fat": 1.7,
+   "fiber": 11.9,
+   "sugar": 0.8
+  },
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "whole-urad",
+  "name": "Whole urad",
+  "aliases": [
+   "sabut urad",
+   "black urad",
+   "maa ki dal"
+  ],
+  "category": "pulse",
+  "unit": "g",
+  "per100": {
+   "kcal": 291,
+   "protein": 22,
+   "carbs": 44,
+   "fat": 1.6,
+   "fiber": 20.4,
+   "sugar": 0.5
+  },
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "chana-dal",
+  "name": "Chana dal",
+  "aliases": [
+   "bengal gram dal",
+   "kadalai paruppu",
+   "split chickpea"
+  ],
+  "category": "pulse",
+  "unit": "g",
+  "per100": {
+   "kcal": 329,
+   "protein": 21.6,
+   "carbs": 46.7,
+   "fat": 5.3,
+   "fiber": 15.2,
+   "sugar": 1
+  },
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "masoor-dal",
+  "name": "Masoor dal (red lentils)",
+  "aliases": [
+   "red lentils",
+   "adas"
+  ],
+  "category": "pulse",
+  "unit": "g",
+  "per100": {
+   "kcal": 336,
+   "protein": 24.4,
+   "carbs": 57,
+   "fat": 1.4,
+   "fiber": 11,
+   "sugar": 2
+  },
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "brown-lentils",
+  "name": "Brown lentils",
+  "aliases": [
+   "green lentils",
+   "sabut masoor",
+   "whole masoor"
+  ],
+  "category": "pulse",
+  "unit": "g",
+  "per100": {
+   "kcal": 352,
+   "protein": 24.6,
+   "carbs": 63,
+   "fat": 1.1,
+   "fiber": 10.7,
+   "sugar": 2
+  },
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "chickpeas",
+  "name": "Chickpeas (kabuli chana)",
+  "aliases": [
+   "kabuli chana",
+   "chole",
+   "garbanzo",
+   "hummus beans"
+  ],
+  "category": "pulse",
+  "unit": "g",
+  "per100": {
+   "kcal": 364,
+   "protein": 19.3,
+   "carbs": 61,
+   "fat": 6,
+   "fiber": 17.4,
+   "sugar": 10.7
+  },
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "kala-chana",
+  "name": "Kala chana",
+  "aliases": [
+   "black chickpeas",
+   "brown chana"
+  ],
+  "category": "pulse",
+  "unit": "g",
+  "per100": {
+   "kcal": 287,
+   "protein": 18.8,
+   "carbs": 39.6,
+   "fat": 5.1,
+   "fiber": 25.2,
+   "sugar": 1
+  },
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "rajma",
+  "name": "Rajma (kidney beans)",
+  "aliases": [
+   "kidney beans",
+   "red beans"
+  ],
+  "category": "pulse",
+  "unit": "g",
+  "per100": {
+   "kcal": 333,
+   "protein": 23.6,
+   "carbs": 60,
+   "fat": 0.8,
+   "fiber": 15,
+   "sugar": 2.2
+  },
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "lobia",
+  "name": "Lobia (black-eyed peas)",
+  "aliases": [
+   "black eyed beans",
+   "chawli",
+   "cowpeas"
+  ],
+  "category": "pulse",
+  "unit": "g",
+  "per100": {
+   "kcal": 336,
+   "protein": 23.5,
+   "carbs": 60,
+   "fat": 1.3,
+   "fiber": 10.6,
+   "sugar": 6.9
+  },
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "fava-beans",
+  "name": "Dried fava beans",
+  "aliases": [
+   "foul",
+   "ful",
+   "broad beans"
+  ],
+  "category": "pulse",
+  "unit": "g",
+  "per100": {
+   "kcal": 341,
+   "protein": 26,
+   "carbs": 58,
+   "fat": 1.5,
+   "fiber": 25,
+   "sugar": 5.7
+  },
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "black-beans",
+  "name": "Black beans",
+  "aliases": [
+   "black turtle beans"
+  ],
+  "category": "pulse",
+  "unit": "g",
+  "per100": {
+   "kcal": 341,
+   "protein": 21.6,
+   "carbs": 62.4,
+   "fat": 1.4,
+   "fiber": 15.5,
+   "sugar": 2.1
+  },
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "soya-chunks",
+  "name": "Soya chunks",
+  "aliases": [
+   "soy chunks",
+   "meal maker",
+   "nutrela"
+  ],
+  "category": "protein",
+  "unit": "g",
+  "per100": {
+   "kcal": 345,
+   "protein": 52,
+   "carbs": 33,
+   "fat": 0.5,
+   "fiber": 13,
+   "sugar": 6
+  },
+  "packSizes": [
+   200,
+   500
+  ],
+  "defaultPar": 100
+ },
+ {
+  "id": "sattu",
+  "name": "Sattu (roasted gram flour)",
+  "aliases": [
+   "chana sattu",
+   "roasted chana flour"
+  ],
+  "category": "pulse",
+  "unit": "g",
+  "per100": {
+   "kcal": 380,
+   "protein": 22,
+   "carbs": 58,
+   "fat": 6,
+   "fiber": 18,
+   "sugar": 2
+  },
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "makhana",
+  "name": "Makhana (fox nuts)",
+  "aliases": [
+   "lotus seeds",
+   "phool makhana",
+   "fox nuts"
+  ],
+  "category": "nut",
+  "unit": "g",
+  "per100": {
+   "kcal": 347,
+   "protein": 9.7,
+   "carbs": 77,
+   "fat": 0.1,
+   "fiber": 14.5,
+   "sugar": 0
+  },
+  "packSizes": [
+   100,
+   250
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "onion",
+  "name": "Onion",
+  "aliases": [
+   "pyaz",
+   "kanda",
+   "vengayam",
+   "red onion"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 40,
+   "protein": 1.1,
+   "carbs": 9.3,
+   "fat": 0.1,
+   "fiber": 1.7,
+   "sugar": 4.2
+  },
+  "perishableDays": 30,
+  "packSizes": [
+   500,
+   1000,
+   2000
+  ],
+  "defaultPar": 500
+ },
+ {
+  "id": "shallots",
+  "name": "Shallots",
+  "aliases": [
+   "sambar onion",
+   "chinna vengayam",
+   "small onion"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 72,
+   "protein": 2.5,
+   "carbs": 16.8,
+   "fat": 0.1,
+   "fiber": 3.2,
+   "sugar": 7.9
+  },
+  "perishableDays": 20,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "tomato",
+  "name": "Tomato",
+  "aliases": [
+   "tamatar",
+   "thakkali"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 18,
+   "protein": 0.9,
+   "carbs": 3.9,
+   "fat": 0.2,
+   "fiber": 1.2,
+   "sugar": 2.6
+  },
+  "perishableDays": 6,
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 300
+ },
+ {
+  "id": "potato",
+  "name": "Potato",
+  "aliases": [
+   "aloo",
+   "batata",
+   "urulai"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 77,
+   "protein": 2,
+   "carbs": 17,
+   "fat": 0.1,
+   "fiber": 2.2,
+   "sugar": 0.8
+  },
+  "perishableDays": 30,
+  "packSizes": [
+   500,
+   1000,
+   2000
+  ],
+  "defaultPar": 500
+ },
+ {
+  "id": "sweet-potato",
+  "name": "Sweet potato",
+  "aliases": [
+   "shakarkand",
+   "genasu"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 86,
+   "protein": 1.6,
+   "carbs": 20,
+   "fat": 0.1,
+   "fiber": 3,
+   "sugar": 4.2
+  },
+  "perishableDays": 20,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "garlic",
+  "name": "Garlic",
+  "aliases": [
+   "lehsun",
+   "poondu"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 149,
+   "protein": 6.4,
+   "carbs": 33,
+   "fat": 0.5,
+   "fiber": 2.1,
+   "sugar": 1
+  },
+  "perishableDays": 30,
+  "packSizes": [
+   100,
+   250
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "ginger",
+  "name": "Ginger",
+  "aliases": [
+   "adrak",
+   "inji",
+   "galangal"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 80,
+   "protein": 1.8,
+   "carbs": 18,
+   "fat": 0.8,
+   "fiber": 2,
+   "sugar": 1.7
+  },
+  "perishableDays": 20,
+  "packSizes": [
+   100,
+   250
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "green-chilli",
+  "name": "Green chilli",
+  "aliases": [
+   "hari mirch",
+   "pachai milagai",
+   "bird eye chilli",
+   "jalapeno"
+  ],
+  "category": "vegetable",
+  "unit": "pc",
+  "gramsPerPc": 4,
+  "per100": {
+   "kcal": 40,
+   "protein": 2,
+   "carbs": 9.5,
+   "fat": 0.2,
+   "fiber": 1.5,
+   "sugar": 5.1
+  },
+  "perishableDays": 10,
+  "packSizes": [
+   25,
+   50
+  ],
+  "defaultPar": 10
+ },
+ {
+  "id": "carrot",
+  "name": "Carrot",
+  "aliases": [
+   "gajar"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 41,
+   "protein": 0.9,
+   "carbs": 9.6,
+   "fat": 0.2,
+   "fiber": 2.8,
+   "sugar": 4.7
+  },
+  "perishableDays": 14,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "capsicum",
+  "name": "Capsicum (green)",
+  "aliases": [
+   "shimla mirch",
+   "green bell pepper"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 20,
+   "protein": 0.9,
+   "carbs": 4.6,
+   "fat": 0.2,
+   "fiber": 1.7,
+   "sugar": 2.4
+  },
+  "perishableDays": 7,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "red-pepper",
+  "name": "Red / yellow bell pepper",
+  "aliases": [
+   "bell pepper",
+   "red capsicum",
+   "yellow capsicum"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 31,
+   "protein": 1,
+   "carbs": 6,
+   "fat": 0.3,
+   "fiber": 2.1,
+   "sugar": 4.2
+  },
+  "perishableDays": 7,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "cauliflower",
+  "name": "Cauliflower",
+  "aliases": [
+   "gobi",
+   "phool gobi"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 25,
+   "protein": 1.9,
+   "carbs": 5,
+   "fat": 0.3,
+   "fiber": 2,
+   "sugar": 1.9
+  },
+  "perishableDays": 6,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "cabbage",
+  "name": "Cabbage",
+  "aliases": [
+   "patta gobi",
+   "muttaikose",
+   "napa cabbage"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 25,
+   "protein": 1.3,
+   "carbs": 5.8,
+   "fat": 0.1,
+   "fiber": 2.5,
+   "sugar": 3.2
+  },
+  "perishableDays": 10,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "broccoli",
+  "name": "Broccoli",
+  "aliases": [],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 34,
+   "protein": 2.8,
+   "carbs": 6.6,
+   "fat": 0.4,
+   "fiber": 2.6,
+   "sugar": 1.7
+  },
+  "perishableDays": 5,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "spinach",
+  "name": "Spinach",
+  "aliases": [
+   "palak",
+   "keerai",
+   "greens",
+   "amaranth leaves"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 23,
+   "protein": 2.9,
+   "carbs": 3.6,
+   "fat": 0.4,
+   "fiber": 2.2,
+   "sugar": 0.4
+  },
+  "perishableDays": 3,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "methi",
+  "name": "Fenugreek leaves",
+  "aliases": [
+   "methi",
+   "fresh methi",
+   "vendhaya keerai"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 35,
+   "protein": 4,
+   "carbs": 4.3,
+   "fat": 0.9,
+   "fiber": 4.9,
+   "sugar": 0.4
+  },
+  "perishableDays": 3,
+  "packSizes": [
+   100,
+   250
+  ],
+  "defaultPar": 100
+ },
+ {
+  "id": "green-beans",
+  "name": "French beans",
+  "aliases": [
+   "beans",
+   "string beans",
+   "green beans"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 31,
+   "protein": 1.8,
+   "carbs": 7,
+   "fat": 0.2,
+   "fiber": 2.7,
+   "sugar": 3.3
+  },
+  "perishableDays": 6,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "okra",
+  "name": "Okra (bhindi)",
+  "aliases": [
+   "bhindi",
+   "ladies finger",
+   "vendakkai"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 33,
+   "protein": 1.9,
+   "carbs": 7.5,
+   "fat": 0.2,
+   "fiber": 3.2,
+   "sugar": 1.5
+  },
+  "perishableDays": 4,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "brinjal",
+  "name": "Brinjal / eggplant",
+  "aliases": [
+   "baingan",
+   "eggplant",
+   "aubergine",
+   "kathirikai"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 25,
+   "protein": 1,
+   "carbs": 5.9,
+   "fat": 0.2,
+   "fiber": 3,
+   "sugar": 3.5
+  },
+  "perishableDays": 6,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "bottle-gourd",
+  "name": "Bottle gourd",
+  "aliases": [
+   "lauki",
+   "doodhi",
+   "sorakaya"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 14,
+   "protein": 0.6,
+   "carbs": 3.4,
+   "fat": 0,
+   "fiber": 0.5,
+   "sugar": 1.2
+  },
+  "perishableDays": 7,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "ridge-gourd",
+  "name": "Ridge gourd",
+  "aliases": [
+   "turai",
+   "peerkangai",
+   "beerakaya"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 20,
+   "protein": 1.2,
+   "carbs": 4.4,
+   "fat": 0.2,
+   "fiber": 1.1,
+   "sugar": 1.5
+  },
+  "perishableDays": 5,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "pumpkin",
+  "name": "Pumpkin (red)",
+  "aliases": [
+   "kaddu",
+   "parangikai",
+   "squash"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 26,
+   "protein": 1,
+   "carbs": 6.5,
+   "fat": 0.1,
+   "fiber": 0.5,
+   "sugar": 2.8
+  },
+  "perishableDays": 14,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "raw-banana",
+  "name": "Raw banana",
+  "aliases": [
+   "plantain",
+   "kachha kela",
+   "vazhakkai"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 116,
+   "protein": 1.3,
+   "carbs": 31,
+   "fat": 0.4,
+   "fiber": 2.3,
+   "sugar": 15
+  },
+  "perishableDays": 6,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "raw-papaya",
+  "name": "Raw papaya",
+  "aliases": [
+   "kacha papita",
+   "green papaya"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 32,
+   "protein": 0.6,
+   "carbs": 7.2,
+   "fat": 0.1,
+   "fiber": 2.6,
+   "sugar": 4
+  },
+  "perishableDays": 6,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "mustard-greens",
+  "name": "Mustard greens",
+  "aliases": [
+   "sarson saag",
+   "sarson ke patte"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 27,
+   "protein": 2.9,
+   "carbs": 4.7,
+   "fat": 0.4,
+   "fiber": 3.2,
+   "sugar": 1.3
+  },
+  "perishableDays": 3,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "drumstick",
+  "name": "Drumstick (moringa)",
+  "aliases": [
+   "moringa",
+   "murungakkai",
+   "sahjan"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 29,
+   "protein": 2.6,
+   "carbs": 3.8,
+   "fat": 0.1,
+   "fiber": 6.8,
+   "sugar": 1.5
+  },
+  "perishableDays": 5,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "cucumber",
+  "name": "Cucumber",
+  "aliases": [
+   "kheera",
+   "kakdi"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 15,
+   "protein": 0.7,
+   "carbs": 3.6,
+   "fat": 0.1,
+   "fiber": 0.5,
+   "sugar": 1.7
+  },
+  "perishableDays": 6,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "zucchini",
+  "name": "Zucchini",
+  "aliases": [
+   "courgette"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 17,
+   "protein": 1.2,
+   "carbs": 3.1,
+   "fat": 0.3,
+   "fiber": 1,
+   "sugar": 2.5
+  },
+  "perishableDays": 6,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "mushroom",
+  "name": "Mushrooms",
+  "aliases": [
+   "button mushroom",
+   "shiitake",
+   "khumb"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 22,
+   "protein": 3.1,
+   "carbs": 3.3,
+   "fat": 0.3,
+   "fiber": 1,
+   "sugar": 2
+  },
+  "perishableDays": 3,
+  "packSizes": [
+   200,
+   400
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "beetroot",
+  "name": "Beetroot",
+  "aliases": [
+   "chukandar",
+   "beets"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 43,
+   "protein": 1.6,
+   "carbs": 9.6,
+   "fat": 0.2,
+   "fiber": 2.8,
+   "sugar": 6.8
+  },
+  "perishableDays": 14,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "peas",
+  "name": "Green peas",
+  "aliases": [
+   "matar",
+   "frozen peas",
+   "pattani"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 81,
+   "protein": 5.4,
+   "carbs": 14.5,
+   "fat": 0.4,
+   "fiber": 5.1,
+   "sugar": 5.7
+  },
+  "perishableDays": 60,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "corn",
+  "name": "Sweet corn kernels",
+  "aliases": [
+   "makai",
+   "sweetcorn",
+   "bhutta"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 86,
+   "protein": 3.3,
+   "carbs": 19,
+   "fat": 1.4,
+   "fiber": 2,
+   "sugar": 6.3
+  },
+  "perishableDays": 60,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "spring-onion",
+  "name": "Spring onion",
+  "aliases": [
+   "scallion",
+   "green onion",
+   "hara pyaz"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 32,
+   "protein": 1.8,
+   "carbs": 7.3,
+   "fat": 0.2,
+   "fiber": 2.6,
+   "sugar": 2.3
+  },
+  "perishableDays": 4,
+  "packSizes": [
+   100,
+   250
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "lettuce",
+  "name": "Lettuce",
+  "aliases": [
+   "romaine",
+   "iceberg",
+   "salad leaves"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 15,
+   "protein": 1.4,
+   "carbs": 2.9,
+   "fat": 0.2,
+   "fiber": 1.3,
+   "sugar": 0.8
+  },
+  "perishableDays": 4,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "celery",
+  "name": "Celery",
+  "aliases": [],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 16,
+   "protein": 0.7,
+   "carbs": 3,
+   "fat": 0.2,
+   "fiber": 1.6,
+   "sugar": 1.3
+  },
+  "perishableDays": 10,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "bok-choy",
+  "name": "Bok choy",
+  "aliases": [
+   "pak choi",
+   "chinese greens"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 13,
+   "protein": 1.5,
+   "carbs": 2.2,
+   "fat": 0.2,
+   "fiber": 1,
+   "sugar": 1.2
+  },
+  "perishableDays": 4,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "bean-sprouts",
+  "name": "Bean sprouts",
+  "aliases": [
+   "moong sprouts",
+   "mung bean sprouts"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 30,
+   "protein": 3,
+   "carbs": 6,
+   "fat": 0.2,
+   "fiber": 1.8,
+   "sugar": 4.1
+  },
+  "perishableDays": 3,
+  "packSizes": [
+   200
+  ],
+  "defaultPar": 100
+ },
+ {
+  "id": "bamboo-shoot",
+  "name": "Bamboo shoot",
+  "aliases": [
+   "khorisa",
+   "bas tenga"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 27,
+   "protein": 2.6,
+   "carbs": 5.2,
+   "fat": 0.3,
+   "fiber": 2.2,
+   "sugar": 3
+  },
+  "perishableDays": 5,
+  "packSizes": [
+   200,
+   500
+  ],
+  "defaultPar": 100
+ },
+ {
+  "id": "radish",
+  "name": "Radish",
+  "aliases": [
+   "mooli",
+   "mullangi"
+  ],
+  "category": "vegetable",
+  "unit": "g",
+  "per100": {
+   "kcal": 16,
+   "protein": 0.7,
+   "carbs": 3.4,
+   "fat": 0.1,
+   "fiber": 1.6,
+   "sugar": 1.9
+  },
+  "perishableDays": 7,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "avocado",
+  "name": "Avocado",
+  "aliases": [
+   "butter fruit"
+  ],
+  "category": "fruit",
+  "unit": "pc",
+  "gramsPerPc": 150,
+  "per100": {
+   "kcal": 160,
+   "protein": 2,
+   "carbs": 8.5,
+   "fat": 14.7,
+   "fiber": 6.7,
+   "sugar": 0.7
+  },
+  "perishableDays": 4,
+  "packSizes": [
+   1,
+   2,
+   4
+  ],
+  "defaultPar": 1
+ },
+ {
+  "id": "olives",
+  "name": "Olives",
+  "aliases": [
+   "black olives",
+   "green olives"
+  ],
+  "category": "condiment",
+  "unit": "g",
+  "per100": {
+   "kcal": 115,
+   "protein": 0.8,
+   "carbs": 6,
+   "fat": 10.7,
+   "fiber": 3.2,
+   "sugar": 0
+  },
+  "packSizes": [
+   200,
+   400
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "coriander-leaves",
+  "name": "Coriander leaves",
+  "aliases": [
+   "cilantro",
+   "dhania patta",
+   "kothamalli"
+  ],
+  "category": "herb",
+  "unit": "g",
+  "per100": {
+   "kcal": 23,
+   "protein": 2.1,
+   "carbs": 3.7,
+   "fat": 0.5,
+   "fiber": 2.8,
+   "sugar": 0.9
+  },
+  "perishableDays": 4,
+  "packSizes": [
+   50,
+   100
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "mint",
+  "name": "Mint leaves",
+  "aliases": [
+   "pudina"
+  ],
+  "category": "herb",
+  "unit": "g",
+  "per100": {
+   "kcal": 44,
+   "protein": 3.3,
+   "carbs": 8.4,
+   "fat": 0.7,
+   "fiber": 6.8,
+   "sugar": 0
+  },
+  "perishableDays": 4,
+  "packSizes": [
+   50,
+   100
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "curry-leaves",
+  "name": "Curry leaves",
+  "aliases": [
+   "kadi patta",
+   "karuveppilai"
+  ],
+  "category": "herb",
+  "unit": "g",
+  "per100": {
+   "kcal": 108,
+   "protein": 6.1,
+   "carbs": 18.7,
+   "fat": 1,
+   "fiber": 6.4,
+   "sugar": 0
+  },
+  "perishableDays": 7,
+  "packSizes": [
+   50,
+   100
+  ],
+  "defaultPar": 10
+ },
+ {
+  "id": "parsley",
+  "name": "Parsley",
+  "aliases": [
+   "flat leaf parsley",
+   "ajmood"
+  ],
+  "category": "herb",
+  "unit": "g",
+  "per100": {
+   "kcal": 36,
+   "protein": 3,
+   "carbs": 6.3,
+   "fat": 0.8,
+   "fiber": 3.3,
+   "sugar": 0.9
+  },
+  "perishableDays": 4,
+  "packSizes": [
+   50,
+   100
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "basil",
+  "name": "Basil",
+  "aliases": [
+   "thai basil",
+   "tulsi"
+  ],
+  "category": "herb",
+  "unit": "g",
+  "per100": {
+   "kcal": 23,
+   "protein": 3.2,
+   "carbs": 2.6,
+   "fat": 0.6,
+   "fiber": 1.6,
+   "sugar": 0.3
+  },
+  "perishableDays": 4,
+  "packSizes": [
+   50,
+   100
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "lemongrass",
+  "name": "Lemongrass",
+  "aliases": [
+   "gavti chaha"
+  ],
+  "category": "herb",
+  "unit": "g",
+  "per100": {
+   "kcal": 99,
+   "protein": 1.8,
+   "carbs": 25,
+   "fat": 0.5,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "perishableDays": 10,
+  "packSizes": [
+   50,
+   100
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "banana",
+  "name": "Banana",
+  "aliases": [
+   "kela",
+   "pazham"
+  ],
+  "category": "fruit",
+  "unit": "pc",
+  "gramsPerPc": 120,
+  "per100": {
+   "kcal": 89,
+   "protein": 1.1,
+   "carbs": 22.8,
+   "fat": 0.3,
+   "fiber": 2.6,
+   "sugar": 12.2
+  },
+  "perishableDays": 4,
+  "packSizes": [
+   6,
+   12
+  ],
+  "defaultPar": 3
+ },
+ {
+  "id": "apple",
+  "name": "Apple",
+  "aliases": [
+   "seb"
+  ],
+  "category": "fruit",
+  "unit": "pc",
+  "gramsPerPc": 180,
+  "per100": {
+   "kcal": 52,
+   "protein": 0.3,
+   "carbs": 13.8,
+   "fat": 0.2,
+   "fiber": 2.4,
+   "sugar": 10.4
+  },
+  "perishableDays": 20,
+  "packSizes": [
+   4,
+   6
+  ],
+  "defaultPar": 2
+ },
+ {
+  "id": "lemon",
+  "name": "Lemon / lime",
+  "aliases": [
+   "lime",
+   "nimbu",
+   "elumichai",
+   "lemon juice"
+  ],
+  "category": "fruit",
+  "unit": "pc",
+  "gramsPerPc": 60,
+  "per100": {
+   "kcal": 29,
+   "protein": 1.1,
+   "carbs": 9.3,
+   "fat": 0.3,
+   "fiber": 2.8,
+   "sugar": 2.5
+  },
+  "perishableDays": 14,
+  "packSizes": [
+   4,
+   6,
+   12
+  ],
+  "defaultPar": 2
+ },
+ {
+  "id": "orange",
+  "name": "Orange",
+  "aliases": [
+   "santra",
+   "mosambi"
+  ],
+  "category": "fruit",
+  "unit": "pc",
+  "gramsPerPc": 150,
+  "per100": {
+   "kcal": 47,
+   "protein": 0.9,
+   "carbs": 11.8,
+   "fat": 0.1,
+   "fiber": 2.4,
+   "sugar": 9.4
+  },
+  "perishableDays": 10,
+  "packSizes": [
+   4,
+   6
+  ],
+  "defaultPar": 2
+ },
+ {
+  "id": "mango",
+  "name": "Mango",
+  "aliases": [
+   "aam"
+  ],
+  "category": "fruit",
+  "unit": "g",
+  "per100": {
+   "kcal": 60,
+   "protein": 0.8,
+   "carbs": 15,
+   "fat": 0.4,
+   "fiber": 1.6,
+   "sugar": 13.7
+  },
+  "perishableDays": 4,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "papaya",
+  "name": "Papaya",
+  "aliases": [
+   "papita"
+  ],
+  "category": "fruit",
+  "unit": "g",
+  "per100": {
+   "kcal": 43,
+   "protein": 0.5,
+   "carbs": 10.8,
+   "fat": 0.3,
+   "fiber": 1.7,
+   "sugar": 7.8
+  },
+  "perishableDays": 4,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "pomegranate",
+  "name": "Pomegranate arils",
+  "aliases": [
+   "anar",
+   "pomegranate seeds"
+  ],
+  "category": "fruit",
+  "unit": "g",
+  "per100": {
+   "kcal": 83,
+   "protein": 1.7,
+   "carbs": 18.7,
+   "fat": 1.2,
+   "fiber": 4,
+   "sugar": 13.7
+  },
+  "perishableDays": 7,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "berries",
+  "name": "Mixed berries",
+  "aliases": [
+   "strawberries",
+   "blueberries",
+   "frozen berries"
+  ],
+  "category": "fruit",
+  "unit": "g",
+  "per100": {
+   "kcal": 50,
+   "protein": 0.7,
+   "carbs": 12,
+   "fat": 0.3,
+   "fiber": 2.5,
+   "sugar": 7.4
+  },
+  "perishableDays": 60,
+  "packSizes": [
+   200,
+   500
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "pineapple",
+  "name": "Pineapple",
+  "aliases": [
+   "ananas"
+  ],
+  "category": "fruit",
+  "unit": "g",
+  "per100": {
+   "kcal": 50,
+   "protein": 0.5,
+   "carbs": 13,
+   "fat": 0.1,
+   "fiber": 1.4,
+   "sugar": 9.9
+  },
+  "perishableDays": 4,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "dates",
+  "name": "Dates",
+  "aliases": [
+   "khajur",
+   "medjool"
+  ],
+  "category": "fruit",
+  "unit": "g",
+  "per100": {
+   "kcal": 282,
+   "protein": 2.5,
+   "carbs": 75,
+   "fat": 0.4,
+   "fiber": 8,
+   "sugar": 63
+  },
+  "packSizes": [
+   250,
+   500
+  ],
+  "defaultPar": 100
+ },
+ {
+  "id": "raisins",
+  "name": "Raisins",
+  "aliases": [
+   "kishmish",
+   "sultanas"
+  ],
+  "category": "fruit",
+  "unit": "g",
+  "per100": {
+   "kcal": 299,
+   "protein": 3.1,
+   "carbs": 79,
+   "fat": 0.5,
+   "fiber": 3.7,
+   "sugar": 59
+  },
+  "packSizes": [
+   100,
+   250
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "coconut",
+  "name": "Fresh coconut (grated)",
+  "aliases": [
+   "nariyal",
+   "thengai",
+   "grated coconut",
+   "desiccated coconut"
+  ],
+  "category": "fruit",
+  "unit": "g",
+  "per100": {
+   "kcal": 354,
+   "protein": 3.3,
+   "carbs": 15,
+   "fat": 33.5,
+   "fiber": 9,
+   "sugar": 6.2
+  },
+  "perishableDays": 5,
+  "packSizes": [
+   200,
+   500
+  ],
+  "defaultPar": 100
+ },
+ {
+  "id": "coconut-milk",
+  "name": "Coconut milk",
+  "aliases": [
+   "thengai paal",
+   "coconut cream"
+  ],
+  "category": "dairy",
+  "unit": "ml",
+  "per100": {
+   "kcal": 190,
+   "protein": 2,
+   "carbs": 3,
+   "fat": 20,
+   "fiber": 0,
+   "sugar": 2
+  },
+  "packSizes": [
+   200,
+   400
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "tamarind",
+  "name": "Tamarind",
+  "aliases": [
+   "imli",
+   "puli"
+  ],
+  "category": "condiment",
+  "unit": "g",
+  "per100": {
+   "kcal": 239,
+   "protein": 2.8,
+   "carbs": 62.5,
+   "fat": 0.6,
+   "fiber": 5.1,
+   "sugar": 57
+  },
+  "packSizes": [
+   100,
+   250
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "milk",
+  "name": "Milk (toned)",
+  "aliases": [
+   "doodh",
+   "paal",
+   "cow milk"
+  ],
+  "category": "dairy",
+  "unit": "ml",
+  "per100": {
+   "kcal": 60,
+   "protein": 3.2,
+   "carbs": 4.8,
+   "fat": 3,
+   "fiber": 0,
+   "sugar": 4.8
+  },
+  "perishableDays": 2,
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 500
+ },
+ {
+  "id": "curd",
+  "name": "Curd / plain yogurt",
+  "aliases": [
+   "dahi",
+   "thayir",
+   "yogurt",
+   "laban"
+  ],
+  "category": "dairy",
+  "unit": "g",
+  "per100": {
+   "kcal": 60,
+   "protein": 3.1,
+   "carbs": 4.6,
+   "fat": 3.3,
+   "fiber": 0,
+   "sugar": 4.6
+  },
+  "perishableDays": 3,
+  "packSizes": [
+   200,
+   400,
+   1000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "greek-yogurt",
+  "name": "Greek yogurt",
+  "aliases": [
+   "hung curd",
+   "strained yogurt"
+  ],
+  "category": "dairy",
+  "unit": "g",
+  "per100": {
+   "kcal": 73,
+   "protein": 9.9,
+   "carbs": 3.9,
+   "fat": 2,
+   "fiber": 0,
+   "sugar": 3.6
+  },
+  "perishableDays": 7,
+  "packSizes": [
+   100,
+   400
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "labneh",
+  "name": "Labneh",
+  "aliases": [
+   "labne"
+  ],
+  "category": "dairy",
+  "unit": "g",
+  "per100": {
+   "kcal": 155,
+   "protein": 7.5,
+   "carbs": 4,
+   "fat": 12,
+   "fiber": 0,
+   "sugar": 4
+  },
+  "perishableDays": 10,
+  "packSizes": [
+   200,
+   400
+  ],
+  "defaultPar": 100
+ },
+ {
+  "id": "paneer",
+  "name": "Paneer",
+  "aliases": [
+   "cottage cheese",
+   "chenna"
+  ],
+  "category": "dairy",
+  "unit": "g",
+  "per100": {
+   "kcal": 260,
+   "protein": 18.5,
+   "carbs": 6,
+   "fat": 17,
+   "fiber": 0,
+   "sugar": 3
+  },
+  "perishableDays": 4,
+  "packSizes": [
+   200,
+   500
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "butter",
+  "name": "Butter",
+  "aliases": [
+   "makhan"
+  ],
+  "category": "dairy",
+  "unit": "g",
+  "per100": {
+   "kcal": 717,
+   "protein": 0.9,
+   "carbs": 0.1,
+   "fat": 81,
+   "fiber": 0,
+   "sugar": 0.1
+  },
+  "perishableDays": 60,
+  "packSizes": [
+   100,
+   500
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "ghee",
+  "name": "Ghee",
+  "aliases": [
+   "clarified butter",
+   "neyyi"
+  ],
+  "category": "oil",
+  "unit": "g",
+  "per100": {
+   "kcal": 900,
+   "protein": 0,
+   "carbs": 0,
+   "fat": 99.5,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "packSizes": [
+   200,
+   500,
+   1000
+  ],
+  "defaultPar": 100
+ },
+ {
+  "id": "cheese",
+  "name": "Cheese (cheddar)",
+  "aliases": [
+   "processed cheese",
+   "cheddar",
+   "cheese slice"
+  ],
+  "category": "dairy",
+  "unit": "g",
+  "per100": {
+   "kcal": 403,
+   "protein": 23,
+   "carbs": 3.1,
+   "fat": 33,
+   "fiber": 0,
+   "sugar": 0.5
+  },
+  "perishableDays": 30,
+  "packSizes": [
+   200,
+   400
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "mozzarella",
+  "name": "Mozzarella",
+  "aliases": [
+   "pizza cheese"
+  ],
+  "category": "dairy",
+  "unit": "g",
+  "per100": {
+   "kcal": 254,
+   "protein": 24,
+   "carbs": 2.8,
+   "fat": 16,
+   "fiber": 0,
+   "sugar": 1.1
+  },
+  "perishableDays": 14,
+  "packSizes": [
+   200,
+   400
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "feta",
+  "name": "Feta / white cheese",
+  "aliases": [
+   "akkawi",
+   "white cheese",
+   "halloumi"
+  ],
+  "category": "dairy",
+  "unit": "g",
+  "per100": {
+   "kcal": 264,
+   "protein": 14,
+   "carbs": 4,
+   "fat": 21,
+   "fiber": 0,
+   "sugar": 4
+  },
+  "perishableDays": 14,
+  "packSizes": [
+   200,
+   400
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "parmesan",
+  "name": "Parmesan",
+  "aliases": [
+   "parmigiano",
+   "grana padano"
+  ],
+  "category": "dairy",
+  "unit": "g",
+  "per100": {
+   "kcal": 392,
+   "protein": 35.8,
+   "carbs": 3.2,
+   "fat": 25.8,
+   "fiber": 0,
+   "sugar": 0.8
+  },
+  "perishableDays": 60,
+  "packSizes": [
+   100,
+   200
+  ],
+  "defaultPar": 30
+ },
+ {
+  "id": "fresh-cream",
+  "name": "Fresh cream",
+  "aliases": [
+   "malai",
+   "cooking cream"
+  ],
+  "category": "dairy",
+  "unit": "ml",
+  "per100": {
+   "kcal": 250,
+   "protein": 2.5,
+   "carbs": 3.5,
+   "fat": 25,
+   "fiber": 0,
+   "sugar": 3.5
+  },
+  "perishableDays": 5,
+  "packSizes": [
+   200,
+   250
+  ],
+  "defaultPar": 100
+ },
+ {
+  "id": "egg",
+  "name": "Eggs",
+  "aliases": [
+   "anda",
+   "muttai"
+  ],
+  "category": "protein",
+  "unit": "pc",
+  "gramsPerPc": 50,
+  "per100": {
+   "kcal": 143,
+   "protein": 12.6,
+   "carbs": 0.7,
+   "fat": 9.5,
+   "fiber": 0,
+   "sugar": 0.4
+  },
+  "perishableDays": 21,
+  "packSizes": [
+   6,
+   12,
+   30
+  ],
+  "defaultPar": 6
+ },
+ {
+  "id": "chicken",
+  "name": "Chicken (curry cut / boneless)",
+  "aliases": [
+   "murgh",
+   "kozhi",
+   "chicken thigh"
+  ],
+  "category": "protein",
+  "unit": "g",
+  "per100": {
+   "kcal": 130,
+   "protein": 21,
+   "carbs": 0,
+   "fat": 5,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "perishableDays": 2,
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 0
+ },
+ {
+  "id": "chicken-breast",
+  "name": "Chicken breast",
+  "aliases": [
+   "boneless chicken breast"
+  ],
+  "category": "protein",
+  "unit": "g",
+  "per100": {
+   "kcal": 120,
+   "protein": 22.5,
+   "carbs": 0,
+   "fat": 2.6,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "perishableDays": 2,
+  "packSizes": [
+   250,
+   500
+  ],
+  "defaultPar": 0
+ },
+ {
+  "id": "mutton",
+  "name": "Mutton (goat)",
+  "aliases": [
+   "goat meat",
+   "gosht"
+  ],
+  "category": "protein",
+  "unit": "g",
+  "per100": {
+   "kcal": 122,
+   "protein": 20.6,
+   "carbs": 0,
+   "fat": 4,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "perishableDays": 2,
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 0
+ },
+ {
+  "id": "lamb-mince",
+  "name": "Lean lamb / mutton mince",
+  "aliases": [
+   "keema",
+   "minced meat",
+   "kofta mince"
+  ],
+  "category": "protein",
+  "unit": "g",
+  "per100": {
+   "kcal": 200,
+   "protein": 19,
+   "carbs": 0,
+   "fat": 13,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "perishableDays": 2,
+  "packSizes": [
+   250,
+   500
+  ],
+  "defaultPar": 0
+ },
+ {
+  "id": "fish",
+  "name": "Fish (white fillet / steaks)",
+  "aliases": [
+   "rohu",
+   "basa",
+   "surmai",
+   "pomfret",
+   "seer fish",
+   "tilapia",
+   "meen"
+  ],
+  "category": "protein",
+  "unit": "g",
+  "per100": {
+   "kcal": 97,
+   "protein": 17.5,
+   "carbs": 0,
+   "fat": 2.5,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "perishableDays": 2,
+  "packSizes": [
+   250,
+   500
+  ],
+  "defaultPar": 0
+ },
+ {
+  "id": "salmon",
+  "name": "Salmon",
+  "aliases": [
+   "salmon fillet"
+  ],
+  "category": "protein",
+  "unit": "g",
+  "per100": {
+   "kcal": 208,
+   "protein": 20,
+   "carbs": 0,
+   "fat": 13,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "perishableDays": 2,
+  "packSizes": [
+   250,
+   500
+  ],
+  "defaultPar": 0
+ },
+ {
+  "id": "prawns",
+  "name": "Prawns",
+  "aliases": [
+   "shrimp",
+   "jhinga",
+   "chingri",
+   "eral"
+  ],
+  "category": "protein",
+  "unit": "g",
+  "per100": {
+   "kcal": 85,
+   "protein": 20,
+   "carbs": 0.2,
+   "fat": 0.5,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "perishableDays": 2,
+  "packSizes": [
+   250,
+   500
+  ],
+  "defaultPar": 0
+ },
+ {
+  "id": "pork",
+  "name": "Pork (lean)",
+  "aliases": [
+   "pork shoulder",
+   "smoked pork"
+  ],
+  "category": "protein",
+  "unit": "g",
+  "per100": {
+   "kcal": 143,
+   "protein": 21,
+   "carbs": 0,
+   "fat": 6,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "perishableDays": 2,
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 0
+ },
+ {
+  "id": "tuna",
+  "name": "Tuna (canned in water)",
+  "aliases": [
+   "canned tuna"
+  ],
+  "category": "protein",
+  "unit": "g",
+  "per100": {
+   "kcal": 116,
+   "protein": 25.5,
+   "carbs": 0,
+   "fat": 0.8,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "packSizes": [
+   150,
+   185
+  ],
+  "defaultPar": 0
+ },
+ {
+  "id": "tofu",
+  "name": "Tofu (firm)",
+  "aliases": [
+   "bean curd",
+   "soy paneer"
+  ],
+  "category": "protein",
+  "unit": "g",
+  "per100": {
+   "kcal": 144,
+   "protein": 17.3,
+   "carbs": 2.8,
+   "fat": 8.7,
+   "fiber": 2.3,
+   "sugar": 0.6
+  },
+  "perishableDays": 7,
+  "packSizes": [
+   200,
+   400
+  ],
+  "defaultPar": 0
+ },
+ {
+  "id": "edamame",
+  "name": "Edamame (shelled)",
+  "aliases": [
+   "green soybeans"
+  ],
+  "category": "protein",
+  "unit": "g",
+  "per100": {
+   "kcal": 121,
+   "protein": 11.9,
+   "carbs": 8.9,
+   "fat": 5.2,
+   "fiber": 5.2,
+   "sugar": 2.2
+  },
+  "perishableDays": 60,
+  "packSizes": [
+   250,
+   500
+  ],
+  "defaultPar": 0
+ },
+ {
+  "id": "oil",
+  "name": "Cooking oil (sunflower / groundnut)",
+  "aliases": [
+   "refined oil",
+   "vegetable oil",
+   "groundnut oil",
+   "sunflower oil",
+   "rice bran oil"
+  ],
+  "category": "oil",
+  "unit": "ml",
+  "per100": {
+   "kcal": 828,
+   "protein": 0,
+   "carbs": 0,
+   "fat": 92,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "packSizes": [
+   1000,
+   5000
+  ],
+  "defaultPar": 300
+ },
+ {
+  "id": "mustard-oil",
+  "name": "Mustard oil",
+  "aliases": [
+   "sarson ka tel",
+   "kachi ghani"
+  ],
+  "category": "oil",
+  "unit": "ml",
+  "per100": {
+   "kcal": 828,
+   "protein": 0,
+   "carbs": 0,
+   "fat": 92,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "olive-oil",
+  "name": "Olive oil",
+  "aliases": [
+   "extra virgin olive oil",
+   "evoo"
+  ],
+  "category": "oil",
+  "unit": "ml",
+  "per100": {
+   "kcal": 810,
+   "protein": 0,
+   "carbs": 0,
+   "fat": 91,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 150
+ },
+ {
+  "id": "coconut-oil",
+  "name": "Coconut oil",
+  "aliases": [
+   "nariyal tel",
+   "thengai ennai"
+  ],
+  "category": "oil",
+  "unit": "ml",
+  "per100": {
+   "kcal": 830,
+   "protein": 0,
+   "carbs": 0,
+   "fat": 92,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "sesame-oil",
+  "name": "Sesame oil",
+  "aliases": [
+   "gingelly oil",
+   "til ka tel",
+   "nallennai",
+   "toasted sesame oil"
+  ],
+  "category": "oil",
+  "unit": "ml",
+  "per100": {
+   "kcal": 814,
+   "protein": 0,
+   "carbs": 0,
+   "fat": 92,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "packSizes": [
+   200,
+   500
+  ],
+  "defaultPar": 100
+ },
+ {
+  "id": "peanuts",
+  "name": "Peanuts",
+  "aliases": [
+   "moongphali",
+   "groundnuts",
+   "verkadalai"
+  ],
+  "category": "nut",
+  "unit": "g",
+  "per100": {
+   "kcal": 567,
+   "protein": 25.8,
+   "carbs": 16,
+   "fat": 49,
+   "fiber": 8.5,
+   "sugar": 4
+  },
+  "packSizes": [
+   200,
+   500
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "cashews",
+  "name": "Cashews",
+  "aliases": [
+   "kaju",
+   "mundiri"
+  ],
+  "category": "nut",
+  "unit": "g",
+  "per100": {
+   "kcal": 553,
+   "protein": 18,
+   "carbs": 30,
+   "fat": 44,
+   "fiber": 3.3,
+   "sugar": 6
+  },
+  "packSizes": [
+   100,
+   200,
+   500
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "almonds",
+  "name": "Almonds",
+  "aliases": [
+   "badam"
+  ],
+  "category": "nut",
+  "unit": "g",
+  "per100": {
+   "kcal": 579,
+   "protein": 21,
+   "carbs": 21.6,
+   "fat": 50,
+   "fiber": 12.5,
+   "sugar": 4.4
+  },
+  "packSizes": [
+   100,
+   200,
+   500
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "walnuts",
+  "name": "Walnuts",
+  "aliases": [
+   "akhrot"
+  ],
+  "category": "nut",
+  "unit": "g",
+  "per100": {
+   "kcal": 654,
+   "protein": 15,
+   "carbs": 14,
+   "fat": 65,
+   "fiber": 6.7,
+   "sugar": 2.6
+  },
+  "packSizes": [
+   100,
+   200,
+   500
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "pistachios",
+  "name": "Pistachios",
+  "aliases": [
+   "pista"
+  ],
+  "category": "nut",
+  "unit": "g",
+  "per100": {
+   "kcal": 560,
+   "protein": 20,
+   "carbs": 27.5,
+   "fat": 45,
+   "fiber": 10.6,
+   "sugar": 7.7
+  },
+  "packSizes": [
+   100,
+   200,
+   500
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "sesame-seeds",
+  "name": "Sesame seeds",
+  "aliases": [
+   "til",
+   "ellu"
+  ],
+  "category": "nut",
+  "unit": "g",
+  "per100": {
+   "kcal": 573,
+   "protein": 17.7,
+   "carbs": 23,
+   "fat": 50,
+   "fiber": 11.8,
+   "sugar": 0.3
+  },
+  "packSizes": [
+   100,
+   200,
+   500
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "tahini",
+  "name": "Tahini",
+  "aliases": [
+   "sesame paste",
+   "tahina"
+  ],
+  "category": "condiment",
+  "unit": "g",
+  "per100": {
+   "kcal": 595,
+   "protein": 17,
+   "carbs": 21,
+   "fat": 54,
+   "fiber": 9.3,
+   "sugar": 0.5
+  },
+  "packSizes": [
+   250,
+   450
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "chia-seeds",
+  "name": "Chia seeds",
+  "aliases": [
+   "sabja",
+   "chia"
+  ],
+  "category": "nut",
+  "unit": "g",
+  "per100": {
+   "kcal": 486,
+   "protein": 16.5,
+   "carbs": 42,
+   "fat": 30.7,
+   "fiber": 34.4,
+   "sugar": 0
+  },
+  "packSizes": [
+   100,
+   200,
+   500
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "flax-seeds",
+  "name": "Flax seeds",
+  "aliases": [
+   "alsi",
+   "linseed"
+  ],
+  "category": "nut",
+  "unit": "g",
+  "per100": {
+   "kcal": 534,
+   "protein": 18.3,
+   "carbs": 29,
+   "fat": 42,
+   "fiber": 27,
+   "sugar": 1.6
+  },
+  "packSizes": [
+   100,
+   200,
+   500
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "pumpkin-seeds",
+  "name": "Pumpkin seeds",
+  "aliases": [
+   "pepitas"
+  ],
+  "category": "nut",
+  "unit": "g",
+  "per100": {
+   "kcal": 559,
+   "protein": 30,
+   "carbs": 10.7,
+   "fat": 49,
+   "fiber": 6,
+   "sugar": 1.4
+  },
+  "packSizes": [
+   100,
+   200,
+   500
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "peanut-butter",
+  "name": "Peanut butter",
+  "aliases": [
+   "pb"
+  ],
+  "category": "condiment",
+  "unit": "g",
+  "per100": {
+   "kcal": 588,
+   "protein": 25,
+   "carbs": 20,
+   "fat": 50,
+   "fiber": 6,
+   "sugar": 9
+  },
+  "packSizes": [
+   340,
+   500
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "mustard-seeds",
+  "name": "Mustard seeds",
+  "aliases": [
+   "rai",
+   "sarson",
+   "kadugu",
+   "avalu"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 509,
+   "protein": 19.5,
+   "carbs": 16.8,
+   "fat": 40,
+   "fiber": 14.1,
+   "sugar": 5
+  },
+  "packSizes": [
+   50,
+   100,
+   200
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "cumin-seeds",
+  "name": "Cumin seeds",
+  "aliases": [
+   "jeera",
+   "jeeragam"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 304,
+   "protein": 13.9,
+   "carbs": 22.6,
+   "fat": 16.6,
+   "fiber": 30.4,
+   "sugar": 1.4
+  },
+  "packSizes": [
+   50,
+   100,
+   200
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "cumin-powder",
+  "name": "Cumin powder",
+  "aliases": [
+   "jeera powder",
+   "roasted cumin"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 304,
+   "protein": 13.9,
+   "carbs": 22.6,
+   "fat": 16.6,
+   "fiber": 30.4,
+   "sugar": 1.4
+  },
+  "packSizes": [
+   50,
+   100,
+   200
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "turmeric",
+  "name": "Turmeric powder",
+  "aliases": [
+   "haldi",
+   "manjal"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 312,
+   "protein": 9.7,
+   "carbs": 67,
+   "fat": 3.3,
+   "fiber": 22.7,
+   "sugar": 3.2
+  },
+  "packSizes": [
+   50,
+   100,
+   200
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "chilli-powder",
+  "name": "Red chilli powder",
+  "aliases": [
+   "lal mirch",
+   "kashmiri chilli",
+   "cayenne",
+   "milagai thool"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 282,
+   "protein": 13.5,
+   "carbs": 50,
+   "fat": 14,
+   "fiber": 34.8,
+   "sugar": 10
+  },
+  "packSizes": [
+   50,
+   100,
+   200
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "coriander-powder",
+  "name": "Coriander powder",
+  "aliases": [
+   "dhania powder",
+   "malli thool"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 298,
+   "protein": 12.4,
+   "carbs": 55,
+   "fat": 17.8,
+   "fiber": 41.9,
+   "sugar": 0
+  },
+  "packSizes": [
+   50,
+   100,
+   200
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "garam-masala",
+  "name": "Garam masala",
+  "aliases": [
+   "kitchen king",
+   "chole masala",
+   "pav bhaji masala"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 380,
+   "protein": 15,
+   "carbs": 45,
+   "fat": 15,
+   "fiber": 25,
+   "sugar": 2
+  },
+  "packSizes": [
+   50,
+   100,
+   200
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "hing",
+  "name": "Asafoetida (hing)",
+  "aliases": [
+   "asafoetida",
+   "perungayam"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 297,
+   "protein": 4,
+   "carbs": 68,
+   "fat": 1,
+   "fiber": 4.1,
+   "sugar": 0
+  },
+  "packSizes": [
+   25,
+   50
+  ],
+  "defaultPar": 5
+ },
+ {
+  "id": "fenugreek-seeds",
+  "name": "Fenugreek seeds",
+  "aliases": [
+   "methi dana",
+   "vendhayam"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 323,
+   "protein": 23,
+   "carbs": 58,
+   "fat": 6.4,
+   "fiber": 24.6,
+   "sugar": 0
+  },
+  "packSizes": [
+   50,
+   100,
+   200
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "fennel-seeds",
+  "name": "Fennel seeds",
+  "aliases": [
+   "saunf",
+   "sombu"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 345,
+   "protein": 15.8,
+   "carbs": 52,
+   "fat": 14.9,
+   "fiber": 39.8,
+   "sugar": 0
+  },
+  "packSizes": [
+   50,
+   100,
+   200
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "ajwain",
+  "name": "Ajwain (carom)",
+  "aliases": [
+   "carom seeds",
+   "omam"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 305,
+   "protein": 16,
+   "carbs": 43,
+   "fat": 21,
+   "fiber": 39,
+   "sugar": 0
+  },
+  "packSizes": [
+   50,
+   100,
+   200
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "black-pepper",
+  "name": "Black pepper",
+  "aliases": [
+   "kali mirch",
+   "milagu",
+   "pepper powder"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 251,
+   "protein": 10.4,
+   "carbs": 64,
+   "fat": 3.3,
+   "fiber": 25,
+   "sugar": 0.6
+  },
+  "packSizes": [
+   50,
+   100,
+   200
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "cardamom",
+  "name": "Green cardamom",
+  "aliases": [
+   "elaichi",
+   "elakkai"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 311,
+   "protein": 10.8,
+   "carbs": 68,
+   "fat": 6.7,
+   "fiber": 28,
+   "sugar": 0
+  },
+  "packSizes": [
+   25,
+   50
+  ],
+  "defaultPar": 5
+ },
+ {
+  "id": "cinnamon",
+  "name": "Cinnamon",
+  "aliases": [
+   "dalchini",
+   "pattai"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 247,
+   "protein": 4,
+   "carbs": 81,
+   "fat": 1.2,
+   "fiber": 53,
+   "sugar": 2.2
+  },
+  "packSizes": [
+   50,
+   100,
+   200
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "cloves",
+  "name": "Cloves",
+  "aliases": [
+   "laung",
+   "kirambu"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 274,
+   "protein": 6,
+   "carbs": 66,
+   "fat": 13,
+   "fiber": 34,
+   "sugar": 2.4
+  },
+  "packSizes": [
+   25,
+   50
+  ],
+  "defaultPar": 5
+ },
+ {
+  "id": "bay-leaf",
+  "name": "Bay leaf",
+  "aliases": [
+   "tej patta",
+   "biryani leaf"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 313,
+   "protein": 7.6,
+   "carbs": 75,
+   "fat": 8.4,
+   "fiber": 26,
+   "sugar": 0
+  },
+  "packSizes": [
+   25
+  ],
+  "defaultPar": 3
+ },
+ {
+  "id": "dry-red-chilli",
+  "name": "Dry red chillies / flakes",
+  "aliases": [
+   "sukhi lal mirch",
+   "chilli flakes",
+   "red pepper flakes",
+   "vara milagai"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 318,
+   "protein": 12,
+   "carbs": 57,
+   "fat": 17,
+   "fiber": 27,
+   "sugar": 10
+  },
+  "packSizes": [
+   50,
+   100,
+   200
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "kasuri-methi",
+  "name": "Kasuri methi",
+  "aliases": [
+   "dried fenugreek leaves"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 280,
+   "protein": 23,
+   "carbs": 45,
+   "fat": 5,
+   "fiber": 25,
+   "sugar": 0
+  },
+  "packSizes": [
+   25,
+   50
+  ],
+  "defaultPar": 5
+ },
+ {
+  "id": "chaat-masala",
+  "name": "Chaat masala",
+  "aliases": [
+   "amchur",
+   "dry mango powder"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 250,
+   "protein": 10,
+   "carbs": 50,
+   "fat": 5,
+   "fiber": 20,
+   "sugar": 5
+  },
+  "packSizes": [
+   50,
+   100,
+   200
+  ],
+  "defaultPar": 10
+ },
+ {
+  "id": "sambar-powder",
+  "name": "Sambar powder",
+  "aliases": [
+   "sambar masala",
+   "rasam powder",
+   "kuzhambu milagai thool"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 320,
+   "protein": 14,
+   "carbs": 50,
+   "fat": 9,
+   "fiber": 22,
+   "sugar": 3
+  },
+  "packSizes": [
+   50,
+   100,
+   200
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "saffron",
+  "name": "Saffron",
+  "aliases": [
+   "kesar",
+   "zafran"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 310,
+   "protein": 11.4,
+   "carbs": 65,
+   "fat": 5.9,
+   "fiber": 3.9,
+   "sugar": 0
+  },
+  "packSizes": [
+   1,
+   2
+  ],
+  "defaultPar": 0.2
+ },
+ {
+  "id": "sumac",
+  "name": "Sumac",
+  "aliases": [
+   "summaq"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 240,
+   "protein": 4.8,
+   "carbs": 71,
+   "fat": 13,
+   "fiber": 28,
+   "sugar": 0
+  },
+  "packSizes": [
+   50,
+   100
+  ],
+  "defaultPar": 10
+ },
+ {
+  "id": "zaatar",
+  "name": "Za'atar",
+  "aliases": [
+   "zatar",
+   "zahtar",
+   "wild thyme mix"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 300,
+   "protein": 10,
+   "carbs": 40,
+   "fat": 13,
+   "fiber": 25,
+   "sugar": 2
+  },
+  "packSizes": [
+   100,
+   200
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "seven-spice",
+  "name": "Lebanese seven spice",
+  "aliases": [
+   "baharat",
+   "sabaa baharat",
+   "allspice"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 300,
+   "protein": 10,
+   "carbs": 60,
+   "fat": 10,
+   "fiber": 30,
+   "sugar": 2
+  },
+  "packSizes": [
+   50,
+   100
+  ],
+  "defaultPar": 10
+ },
+ {
+  "id": "paprika",
+  "name": "Paprika",
+  "aliases": [
+   "smoked paprika"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 282,
+   "protein": 14,
+   "carbs": 54,
+   "fat": 13,
+   "fiber": 35,
+   "sugar": 10
+  },
+  "packSizes": [
+   50,
+   100,
+   200
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "oregano",
+  "name": "Oregano / mixed herbs",
+  "aliases": [
+   "italian seasoning",
+   "dried thyme",
+   "mixed herbs",
+   "thyme",
+   "rosemary"
+  ],
+  "category": "spice",
+  "unit": "g",
+  "per100": {
+   "kcal": 265,
+   "protein": 9,
+   "carbs": 69,
+   "fat": 4.3,
+   "fiber": 42.5,
+   "sugar": 4
+  },
+  "packSizes": [
+   25,
+   50
+  ],
+  "defaultPar": 5
+ },
+ {
+  "id": "salt",
+  "name": "Salt",
+  "aliases": [
+   "namak",
+   "uppu",
+   "sea salt",
+   "rock salt",
+   "sendha namak"
+  ],
+  "category": "condiment",
+  "unit": "g",
+  "per100": {
+   "kcal": 0,
+   "protein": 0,
+   "carbs": 0,
+   "fat": 0,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "staple": true,
+  "packSizes": [
+   1000
+  ],
+  "defaultPar": 0
+ },
+ {
+  "id": "water",
+  "name": "Water",
+  "aliases": [],
+  "category": "condiment",
+  "unit": "ml",
+  "per100": {
+   "kcal": 0,
+   "protein": 0,
+   "carbs": 0,
+   "fat": 0,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "staple": true,
+  "packSizes": [
+   1000
+  ],
+  "defaultPar": 0
+ },
+ {
+  "id": "sugar",
+  "name": "Sugar",
+  "aliases": [
+   "cheeni",
+   "brown sugar"
+  ],
+  "category": "condiment",
+  "unit": "g",
+  "per100": {
+   "kcal": 387,
+   "protein": 0,
+   "carbs": 100,
+   "fat": 0,
+   "fiber": 0,
+   "sugar": 100
+  },
+  "sweetener": true,
+  "packSizes": [
+   500,
+   1000
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "jaggery",
+  "name": "Jaggery",
+  "aliases": [
+   "gur",
+   "vellam",
+   "palm jaggery",
+   "coconut sugar"
+  ],
+  "category": "condiment",
+  "unit": "g",
+  "per100": {
+   "kcal": 354,
+   "protein": 1.9,
+   "carbs": 85,
+   "fat": 0.2,
+   "fiber": 0,
+   "sugar": 84
+  },
+  "sweetener": true,
+  "packSizes": [
+   250,
+   500,
+   1000
+  ],
+  "defaultPar": 100
+ },
+ {
+  "id": "honey",
+  "name": "Honey",
+  "aliases": [
+   "shahad",
+   "maple syrup"
+  ],
+  "category": "condiment",
+  "unit": "g",
+  "per100": {
+   "kcal": 304,
+   "protein": 0.3,
+   "carbs": 82,
+   "fat": 0,
+   "fiber": 0.2,
+   "sugar": 82
+  },
+  "sweetener": true,
+  "packSizes": [
+   250,
+   500
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "cocoa",
+  "name": "Cocoa powder",
+  "aliases": [
+   "unsweetened cocoa"
+  ],
+  "category": "condiment",
+  "unit": "g",
+  "per100": {
+   "kcal": 228,
+   "protein": 19.6,
+   "carbs": 58,
+   "fat": 13.7,
+   "fiber": 37,
+   "sugar": 1.8
+  },
+  "packSizes": [
+   100,
+   200
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "dark-chocolate",
+  "name": "Dark chocolate (70%)",
+  "aliases": [
+   "chocolate"
+  ],
+  "category": "condiment",
+  "unit": "g",
+  "per100": {
+   "kcal": 598,
+   "protein": 7.8,
+   "carbs": 46,
+   "fat": 43,
+   "fiber": 10.9,
+   "sugar": 24
+  },
+  "packSizes": [
+   100
+  ],
+  "defaultPar": 0
+ },
+ {
+  "id": "rose-water",
+  "name": "Rose / orange blossom water",
+  "aliases": [
+   "gulab jal",
+   "orange blossom water",
+   "mazaher"
+  ],
+  "category": "condiment",
+  "unit": "ml",
+  "per100": {
+   "kcal": 0,
+   "protein": 0,
+   "carbs": 0,
+   "fat": 0,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "packSizes": [
+   100,
+   250
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "yeast",
+  "name": "Dry yeast",
+  "aliases": [
+   "instant yeast"
+  ],
+  "category": "condiment",
+  "unit": "g",
+  "per100": {
+   "kcal": 325,
+   "protein": 40,
+   "carbs": 41,
+   "fat": 7.6,
+   "fiber": 26.9,
+   "sugar": 0
+  },
+  "packSizes": [
+   10,
+   100
+  ],
+  "defaultPar": 5
+ },
+ {
+  "id": "baking-soda",
+  "name": "Baking soda / Eno",
+  "aliases": [
+   "soda bicarbonate",
+   "eno",
+   "fruit salt",
+   "baking powder"
+  ],
+  "category": "condiment",
+  "unit": "g",
+  "per100": {
+   "kcal": 0,
+   "protein": 0,
+   "carbs": 0,
+   "fat": 0,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "packSizes": [
+   100
+  ],
+  "defaultPar": 10
+ },
+ {
+  "id": "vinegar",
+  "name": "Vinegar",
+  "aliases": [
+   "white vinegar",
+   "rice vinegar",
+   "apple cider vinegar"
+  ],
+  "category": "condiment",
+  "unit": "ml",
+  "per100": {
+   "kcal": 18,
+   "protein": 0,
+   "carbs": 0,
+   "fat": 0,
+   "fiber": 0,
+   "sugar": 0
+  },
+  "packSizes": [
+   500
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "soy-sauce",
+  "name": "Soy sauce",
+  "aliases": [
+   "light soy",
+   "dark soy",
+   "tamari"
+  ],
+  "category": "condiment",
+  "unit": "ml",
+  "per100": {
+   "kcal": 53,
+   "protein": 8.1,
+   "carbs": 4.9,
+   "fat": 0.6,
+   "fiber": 0.8,
+   "sugar": 0.4
+  },
+  "packSizes": [
+   200,
+   500
+  ],
+  "defaultPar": 50
+ },
+ {
+  "id": "chilli-paste",
+  "name": "Chilli paste / sauce",
+  "aliases": [
+   "gochujang",
+   "sriracha",
+   "schezwan sauce",
+   "doubanjiang",
+   "chilli bean paste",
+   "red chilli sauce"
+  ],
+  "category": "condiment",
+  "unit": "g",
+  "per100": {
+   "kcal": 200,
+   "protein": 5,
+   "carbs": 40,
+   "fat": 2,
+   "fiber": 3,
+   "sugar": 20
+  },
+  "packSizes": [
+   200,
+   500
+  ],
+  "defaultPar": 30
+ },
+ {
+  "id": "miso",
+  "name": "Miso paste",
+  "aliases": [],
+  "category": "condiment",
+  "unit": "g",
+  "per100": {
+   "kcal": 199,
+   "protein": 12,
+   "carbs": 26,
+   "fat": 6,
+   "fiber": 5.4,
+   "sugar": 6.2
+  },
+  "packSizes": [
+   250,
+   500
+  ],
+  "defaultPar": 30
+ },
+ {
+  "id": "fish-sauce",
+  "name": "Fish sauce",
+  "aliases": [
+   "nam pla"
+  ],
+  "category": "condiment",
+  "unit": "ml",
+  "per100": {
+   "kcal": 35,
+   "protein": 5,
+   "carbs": 3.6,
+   "fat": 0,
+   "fiber": 0,
+   "sugar": 3.6
+  },
+  "packSizes": [
+   200
+  ],
+  "defaultPar": 20
+ },
+ {
+  "id": "thai-curry-paste",
+  "name": "Thai curry paste",
+  "aliases": [
+   "green curry paste",
+   "red curry paste"
+  ],
+  "category": "condiment",
+  "unit": "g",
+  "per100": {
+   "kcal": 120,
+   "protein": 2,
+   "carbs": 12,
+   "fat": 6,
+   "fiber": 4,
+   "sugar": 5
+  },
+  "packSizes": [
+   100,
+   200
+  ],
+  "defaultPar": 30
+ },
+ {
+  "id": "tomato-puree",
+  "name": "Tomato puree",
+  "aliases": [
+   "passata",
+   "canned tomatoes",
+   "crushed tomatoes"
+  ],
+  "category": "condiment",
+  "unit": "g",
+  "per100": {
+   "kcal": 32,
+   "protein": 1.6,
+   "carbs": 7,
+   "fat": 0.2,
+   "fiber": 1.5,
+   "sugar": 4.8
+  },
+  "packSizes": [
+   200,
+   500
+  ],
+  "defaultPar": 200
+ },
+ {
+  "id": "tomato-paste",
+  "name": "Tomato paste",
+  "aliases": [
+   "tomato concentrate"
+  ],
+  "category": "condiment",
+  "unit": "g",
+  "per100": {
+   "kcal": 82,
+   "protein": 4.3,
+   "carbs": 19,
+   "fat": 0.5,
+   "fiber": 4.1,
+   "sugar": 12
+  },
+  "packSizes": [
+   70,
+   140
+  ],
+  "defaultPar": 30
+ },
+ {
+  "id": "salsa",
+  "name": "Salsa",
+  "aliases": [
+   "pico de gallo",
+   "tomato salsa"
+  ],
+  "category": "condiment",
+  "unit": "g",
+  "per100": {
+   "kcal": 36,
+   "protein": 1.5,
+   "carbs": 7,
+   "fat": 0.2,
+   "fiber": 1.9,
+   "sugar": 4
+  },
+  "perishableDays": 7,
+  "packSizes": [
+   200,
+   400
+  ],
+  "defaultPar": 0
+ }
+]

@@ -1,0 +1,28 @@
+// The Anthropic API key: Keychain/Keystore on phones, localStorage on web (personal use only).
+import * as SecureStore from 'expo-secure-store';
+import { Platform } from 'react-native';
+
+const KEY = 'anthropic_api_key';
+
+export async function getApiKey(): Promise<string | null> {
+  try {
+    if (Platform.OS === 'web') return globalThis.localStorage?.getItem(KEY) ?? null;
+    return await SecureStore.getItemAsync(KEY);
+  } catch {
+    return null;
+  }
+}
+
+export async function setApiKey(value: string | null): Promise<void> {
+  try {
+    if (Platform.OS === 'web') {
+      if (value) globalThis.localStorage?.setItem(KEY, value);
+      else globalThis.localStorage?.removeItem(KEY);
+      return;
+    }
+    if (value) await SecureStore.setItemAsync(KEY, value);
+    else await SecureStore.deleteItemAsync(KEY);
+  } catch {
+    // Storage unavailable (private browsing etc.); the key just isn't remembered.
+  }
+}

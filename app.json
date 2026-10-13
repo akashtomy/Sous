@@ -1,18 +1,23 @@
 {
   "expo": {
-    "name": "kitchen-manager",
-    "slug": "kitchen-manager",
+    "name": "Sous",
+    "slug": "sous",
+    "description": "Sous: the second-in-command for your kitchen. Plan healthy meals from what you have, cook, and keep the pantry stocked together.",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "kitchenmanager",
+    "scheme": "sous",
     "userInterfaceStyle": "automatic",
+    "backgroundColor": "#FAF8F4",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/images/icon.png",
+      "bundleIdentifier": "app.sous.kitchen",
+      "supportsTablet": true
     },
     "android": {
+      "package": "app.sous.kitchen",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#2F7D4F",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
@@ -20,19 +25,29 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "output": "single",
+      "favicon": "./assets/images/favicon.png",
+      "name": "Sous",
+      "shortName": "Sous",
+      "themeColor": "#2F7D4F",
+      "backgroundColor": "#FAF8F4"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
+          "backgroundColor": "#1F5C39",
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76
+          "imageWidth": 160,
+          "dark": {
+            "backgroundColor": "#12110F",
+            "image": "./assets/images/splash-icon.png"
+          }
         }
-      ]
+      ],
+      "expo-secure-store",
+      "expo-sqlite"
     ],
     "experiments": {
       "typedRoutes": true,
