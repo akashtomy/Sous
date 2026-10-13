@@ -47,23 +47,27 @@ export function T({
   return <Text style={[TEXT[variant], { color: theme[color] }, style]} {...rest} />;
 }
 
-/** Scrollable page with safe-area padding and a centred max width on wide screens. */
+/**
+ * Scrollable page with safe-area padding and a centred max width on wide screens.
+ * `safeTop` pads below the status bar, for screens without a navigation header (the tabs).
+ */
 export function Screen({
   children,
   scroll = true,
   footer,
   padTop = true,
+  safeTop = false,
 }: {
   children: ReactNode;
   scroll?: boolean;
   footer?: ReactNode;
   padTop?: boolean;
+  safeTop?: boolean;
 }) {
   const theme = useTheme();
   const insets = useSafeAreaInsets();
-  const inner = (
-    <View style={[styles.content, { paddingTop: padTop ? Spacing.lg : 0 }]}>{children}</View>
-  );
+  const top = (padTop ? Spacing.lg : 0) + (safeTop ? insets.top : 0);
+  const inner = <View style={[styles.content, { paddingTop: top }]}>{children}</View>;
   return (
     <View style={{ flex: 1, backgroundColor: theme.background }}>
       {scroll ? (

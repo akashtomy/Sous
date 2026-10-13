@@ -60,8 +60,6 @@ export default function SettingsScreen() {
 
   return (
     <Screen>
-      <T variant="title">Settings</T>
-
       <Section title="Shopping">
         <Card>
           <T variant="label">Grocery app for cart filling</T>

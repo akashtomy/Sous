@@ -28,7 +28,7 @@ The web build is a Progressive Web App: people open a link and add Sous to their
 
 **GitHub Pages (set up):** the site is published at **https://akashtomy.github.io/Sous/**.
 
-1. Deploy from your machine. It builds with the Supabase values in your `.env` and publishes `dist/` to the `gh-pages` branch:
+1. Deploy from your machine. It builds with the Supabase values in your `.env` and publishes `dist/` to the `gh-pages` branch with `scripts/deploy-pages.mjs`:
 
    ```bash
    npm run deploy
@@ -127,16 +127,19 @@ Writes are batched every 250 ms and flushed when the app goes to the background.
 
 ## How it works
 
+The screen-by-screen review and the user flows behind this layout are in [docs/ux-review.md](docs/ux-review.md).
+
 | Screen | What it does |
 | --- | --- |
-| **Setup** (first launch) | Tick what you have by category, or start from the "typical Indian kitchen" preset, then edit quantities. |
+| **Welcome** | What Sous does, then *Get started* (create an account, or straight to setup without accounts) or *I already have an account*. |
+| **Setup** (3 steps) | 1 · kitchen name, people, diet → 2 · cuisines, weekday cooking time, weekend prep day → 3 · pantry: tick what you have or add the "typical Indian kitchen" starter, then edit quantities. |
 | **Questions** | Today or the week · meals · people (default 2) · healthy / balanced / cheat · mood · cuisines · **weekday** and **weekend** cooking time (default quick / any) · weekend meal prep and prep day · diet · foods to avoid · optional daily calories · use perishables first. |
-| **Today** | Ranked options per meal, weekday- or weekend-aware, personalised by your tastes: stock coverage, what's missing, reasons, kcal and time. "How was it?" after cooking; **Ate out** shortcut. |
+| **Today** | Kitchen name (tap to rename), quick actions (plan week, groceries, shopping, ate out), today's plan or a *Plan your week* card, then ideas with the **next meal first**, weekday- or weekend-aware, personalised by your tastes: stock coverage, what's missing, reasons, kcal and time. "How was it?" after cooking; **Ate out** shortcut. |
 | **Plan** | 7 days starting on your prep day, quick weekdays, fuller weekends, no repeats. **Alternatives** for every meal (up to 8, ranked); **Ate out** replaces a planned meal. |
 | **Weekend prep** | Sunday (or Saturday) checklist built from the coming weekday meals: batter, beans, dals, sprouts, grains, masala base, ginger-garlic paste, potatoes, marinades, chutneys, dough, chopped veg, herbs. Quantities, storage, which meals each task feeds, which portions to freeze, time spent vs saved. |
 | **Recipes** | All 258 dishes. Search by dish or ingredient (aliases like palak, jeera), filter by cuisine, meal, diet, quick, healthy, can-cook-now, loved; sort by match, time or calories. |
 | **Recipe** | Portion per person, scaled ingredients, method, nutrition, weekday time after prep, **Watch on YouTube** (or the video you saved), verdict (loved / OK / not for me), **Add to week plan**, similar dishes. **Cook this** deducts stock, with **Undo**. |
-| **Kitchen** | Inventory by category, running-low and use-soon filters, "+ bought" pack buttons, alert levels, and the shopping list (badge on the tab). |
+| **Kitchen** | Add one item by search or **update many at once** with the setup checklist; inventory by category, running-low and use-soon filters, "+ bought" pack buttons, alert levels, and the shopping list (badge on the tab). |
 | **Shopping** | Low stock + plan needs + items added from a recipe, rounded to packs. **Copy for Instamart**, **Share**, **Mark bought**. |
 | **You** | Taste profile (styles, cuisines, favourite ingredients, favourites, what you skip), last 7 days (home vs out, spend, kcal/person/day), meals to rate, eating-out log. Settings live here. |
 

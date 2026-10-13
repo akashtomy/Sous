@@ -1,9 +1,10 @@
-import { Redirect } from 'expo-router';
+import { Redirect, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
 
 import { BrandHeader } from '@/components/brand';
 import { Banner, Button, Card, Chip, ChipGroup, Input, Row, Screen, T } from '@/components/ui';
 import { GOOGLE_SIGN_IN } from '@/config/features';
+import { goBackOr } from '@/lib/nav';
 import { normaliseUsername, passwordProblem, usernameProblem } from '@/core/username';
 import { friendlyAuthError, useAuth } from '@/store/auth';
 
@@ -16,7 +17,8 @@ export default function Login() {
   const signUp = useAuth((s) => s.signUp);
   const google = useAuth((s) => s.signInWithGoogle);
   const isAvailable = useAuth((s) => s.isUsernameAvailable);
-  const [mode, setMode] = useState<Mode>('signin');
+  const params = useLocalSearchParams<{ mode?: string }>();
+  const [mode, setMode] = useState<Mode>(params.mode === 'signup' ? 'signup' : 'signin');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPw, setConfirmPw] = useState('');
@@ -94,8 +96,13 @@ export default function Login() {
               : undefined;
 
   return (
-    <Screen>
-      <BrandHeader />
+    <Screen safeTop>
+      <Row>
+        <Button title="Back" icon="chevron-back" kind="ghost" small onPress={() => goBackOr('/welcome')} />
+      </Row>
+      <BrandHeader
+        subtitle={mode === 'signup' ? 'Create your account to start planning' : 'Welcome back'}
+      />
       {error ? <Banner icon="alert-circle-outline" tone="danger" title={error} /> : null}
 
       <Card>

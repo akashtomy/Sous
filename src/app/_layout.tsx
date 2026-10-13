@@ -51,14 +51,11 @@ export default function RootLayout() {
           contentStyle: { backgroundColor: c.background },
         }}>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen
-          name="onboarding"
-          options={{
-            title: 'Set up your kitchen',
-            headerBackVisible: false,
-            gestureEnabled: false,
-          }}
-        />
+        <Stack.Screen name="welcome" options={{ headerShown: false }} />
+        <Stack.Screen name="onboarding" options={{ headerShown: false, gestureEnabled: false }} />
+        <Stack.Screen name="kitchen-name" options={{ title: 'Rename kitchen', presentation: 'modal' }} />
+        <Stack.Screen name="shopping" options={{ title: 'Shopping list' }} />
+        <Stack.Screen name="settings" options={{ title: 'Settings' }} />
         <Stack.Screen name="recipe/[id]" options={{ title: 'Recipe' }} />
         <Stack.Screen
           name="questions"
@@ -72,14 +69,7 @@ export default function RootLayout() {
         <Stack.Screen name="eat-out" options={{ title: 'Ate outside', presentation: 'modal' }} />
         <Stack.Screen name="prep" options={{ title: 'Weekend prep' }} />
         <Stack.Screen name="login" options={{ headerShown: false }} />
-        <Stack.Screen
-          name="household-setup"
-          options={{
-            title: 'Set up your kitchen',
-            headerBackVisible: false,
-            gestureEnabled: false,
-          }}
-        />
+        <Stack.Screen name="household-setup" options={{ headerShown: false, gestureEnabled: false }} />
         <Stack.Screen name="household" options={{ title: 'Household & partner' }} />
         <Stack.Screen name="auth-callback" options={{ headerShown: false }} />
         <Stack.Screen name="reset-password" options={{ title: 'New password' }} />

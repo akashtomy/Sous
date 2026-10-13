@@ -23,6 +23,7 @@ import type { Rating } from '@/core/persona';
 import { Spacing } from '@/constants/theme';
 import { useAuth } from '@/store/auth';
 import { todayIso, useKitchen } from '@/store/kitchen';
+import { useKitchenName } from '@/store/kitchen-name';
 import { usePersona } from '@/store/selectors';
 
 const RATING_LABEL: {
@@ -65,6 +66,7 @@ export default function YouScreen() {
   const removeOutside = useKitchen((s) => s.removeOutside);
   const setPrefs = useKitchen((s) => s.setPrefs);
   const today = todayIso();
+  const kitchenName = useKitchenName();
 
   const recent: Entry[] = useMemo(() => {
     const home: Entry[] = history.map((h) => ({
@@ -85,9 +87,9 @@ export default function YouScreen() {
     .slice(0, 5);
 
   return (
-    <Screen>
+    <Screen safeTop>
       <Row style={{ justifyContent: 'space-between' }}>
-        <T variant="title">Your kitchen profile</T>
+        <T variant="title">You</T>
         <IconButton
           icon="settings-outline"
           label="Settings"
@@ -112,7 +114,19 @@ export default function YouScreen() {
             <Chip label={members.length > 1 ? 'Manage' : 'Invite'} icon="people-outline" />
           </Row>
         </Card>
-      ) : null}
+      ) : (
+        <Card onPress={() => router.push('/kitchen-name')}>
+          <Row style={{ justifyContent: 'space-between' }}>
+            <View style={{ flex: 1 }}>
+              <T variant="label">{kitchenName}</T>
+              <T variant="small" color="textMuted">
+                Saved on this device only
+              </T>
+            </View>
+            <Chip label="Rename" icon="pencil" />
+          </Row>
+        </Card>
+      )}
       {!persona.enoughData ? (
         <Banner
           icon="sparkles-outline"

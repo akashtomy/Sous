@@ -40,7 +40,7 @@ export default function PlanScreen() {
 
   if (!plan) {
     return (
-      <Screen>
+      <Screen safeTop>
         <Empty
           icon="calendar-outline"
           title="No weekly plan yet"
@@ -49,7 +49,7 @@ export default function PlanScreen() {
             <Button
               title="Plan my week"
               icon="sparkles"
-              onPress={() => router.push('/questions')}
+              onPress={() => router.push({ pathname: '/questions', params: { scope: 'week' } })}
             />
           }
         />
@@ -69,7 +69,7 @@ export default function PlanScreen() {
   const prepLeft = prep ? prep.tasks.filter((t) => !prepDone.includes(t.id)).length : 0;
 
   return (
-    <Screen>
+    <Screen safeTop>
       <View>
         <T variant="title">Your week</T>
         <T color="textMuted">
@@ -86,7 +86,7 @@ export default function PlanScreen() {
           icon="options-outline"
           kind="secondary"
           small
-          onPress={() => router.push('/questions')}
+          onPress={() => router.push({ pathname: '/questions', params: { scope: 'week' } })}
         />
         <Button
           title="Clear"

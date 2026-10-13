@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { IngredientSearch, QuantityForm } from '@/components/ingredient-picker';
+import { KitchenTitle } from '@/components/kitchen-title';
 import { CATEGORY_LABEL } from '@/components/meal';
 import {
   Banner,
@@ -79,32 +80,14 @@ export default function InventoryScreen() {
   }, [items, filter, today]);
 
   return (
-    <Screen>
-      <T variant="title">Your kitchen</T>
-      <T color="textMuted">Cooking deducts automatically. Add anything you buy offline here.</T>
-      <Banner
-        icon="cart-outline"
-        tone={refill.length ? 'accent' : 'primary'}
-        title={
-          refill.length
-            ? `Shopping list · ${refill.length} item${refill.length === 1 ? '' : 's'}`
-            : 'Shopping list is empty'
-        }
-        body={
-          refill.length
-            ? refill
-                .slice(0, 4)
-                .map((r) => r.name)
-                .join(', ') + (refill.length > 4 ? '…' : '')
-            : 'Low stock and plan needs show up here.'
-        }
-        action={
-          <Button title="Open" small kind="secondary" onPress={() => router.push('/shopping')} />
-        }
+    <Screen safeTop>
+      <KitchenTitle
+        title="Pantry"
+        subtitle={`${items.length} item${items.length === 1 ? '' : 's'} · cooking deducts automatically`}
       />
 
       <Card>
-        <T variant="label">Add or restock an item</T>
+        <T variant="label">Bought groceries?</T>
         {adding ? (
           <QuantityForm
             ingredient={adding}
@@ -116,9 +99,35 @@ export default function InventoryScreen() {
             onCancel={() => setAdding(null)}
           />
         ) : (
-          <IngredientSearch onPick={setAdding} />
+          <>
+            <IngredientSearch onPick={setAdding} placeholder="Add one item (e.g. paneer, jeera)" />
+            <Button
+              title="Update many items at once"
+              icon="list-outline"
+              kind="secondary"
+              small
+              onPress={() => router.push({ pathname: '/onboarding', params: { mode: 'pantry' } })}
+            />
+          </>
         )}
       </Card>
+
+      {refill.length ? (
+        <Banner
+          icon="cart-outline"
+          tone="accent"
+          title={`Shopping list · ${refill.length} item${refill.length === 1 ? '' : 's'}`}
+          body={
+            refill
+              .slice(0, 4)
+              .map((r) => r.name)
+              .join(', ') + (refill.length > 4 ? '…' : '')
+          }
+          action={
+            <Button title="Open" small kind="secondary" onPress={() => router.push('/shopping')} />
+          }
+        />
+      ) : null}
 
       <ChipGroup>
         <Chip
@@ -144,7 +153,7 @@ export default function InventoryScreen() {
           title={filter === 'all' ? 'Your kitchen is empty' : 'Nothing here'}
           body={
             filter === 'all'
-              ? 'Search above to add what you have, or run setup again from Settings.'
+              ? 'Search above to add what you have, or tick items with “Update many items at once”.'
               : 'Good news — nothing in this list right now.'
           }
         />

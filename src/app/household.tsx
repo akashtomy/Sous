@@ -20,6 +20,7 @@ import { passwordProblem } from '@/core/username';
 import { confirm } from '@/lib/confirm';
 import { friendlyAuthError, useAuth } from '@/store/auth';
 import { useKitchen } from '@/store/kitchen';
+import { MAX_KITCHEN_NAME } from '@/store/kitchen-name';
 
 /** Kitchen name, partners, invite codes, sync status and sign-out. */
 export default function HouseholdScreen() {
@@ -48,7 +49,7 @@ export default function HouseholdScreen() {
   const [error, setError] = useState<string | null>(null);
 
   if (status === 'disabled') return <Redirect href="/settings" />;
-  if (status !== 'signedIn') return <Redirect href="/login" />;
+  if (status !== 'signedIn') return <Redirect href="/welcome" />;
   if (!household) return <Redirect href="/household-setup" />;
   const isOwner = household.role === 'owner';
 
@@ -93,6 +94,30 @@ export default function HouseholdScreen() {
           lastSyncedAt ? `Last synced ${new Date(lastSyncedAt).toLocaleTimeString()}` : undefined
         }
       />
+
+      <Section title="Kitchen name">
+        <Row>
+          <Input
+            value={name}
+            onChangeText={setName}
+            maxLength={MAX_KITCHEN_NAME}
+            style={{ flex: 1 }}
+            accessibilityLabel="Kitchen name"
+          />
+          <Button
+            title="Save"
+            small
+            disabled={!name.trim() || name.trim() === household.name}
+            loading={busy === 'rename'}
+            onPress={() =>
+              run('rename', async () => {
+                await rename(name.trim());
+                showToast('Kitchen renamed');
+              })
+            }
+          />
+        </Row>
+      </Section>
 
       <Section title="People">
         <Card>
@@ -178,26 +203,6 @@ export default function HouseholdScreen() {
           )}
         </Card>
       </Section>
-
-      {isOwner ? (
-        <Section title="Kitchen name">
-          <Row>
-            <Input
-              value={name}
-              onChangeText={setName}
-              style={{ flex: 1 }}
-              accessibilityLabel="Kitchen name"
-            />
-            <Button
-              title="Save"
-              small
-              disabled={!name.trim() || name.trim() === household.name}
-              loading={busy === 'rename'}
-              onPress={() => run('rename', () => rename(name))}
-            />
-          </Row>
-        </Section>
-      ) : null}
 
       <Section title="Join a different kitchen">
         <T variant="small" color="textMuted">

@@ -1,6 +1,7 @@
 import { router } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { FlatList, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { COURSE_LABEL, CUISINE_LABEL, MealCard } from '@/components/meal';
 import { Chip, ChipGroup, Empty, Input, Row, T } from '@/components/ui';
@@ -57,6 +58,7 @@ export default function RecipesScreen() {
   const ai = useKitchen((s) => s.aiRecipes);
   const persona = usePersona();
   const theme = useTheme();
+  const insets = useSafeAreaInsets();
   const [q, setQ] = useState('');
   const [cuisines, setCuisines] = useState<Cuisine[]>([]);
   const [courses, setCourses] = useState<Course[]>([]);
@@ -114,8 +116,12 @@ export default function RecipesScreen() {
   ]);
 
   const header = (
-    <View style={{ gap: Spacing.md, paddingTop: Spacing.lg, paddingBottom: Spacing.sm }}>
-      <T variant="title">All recipes</T>
+    <View
+      style={{ gap: Spacing.md, paddingTop: Spacing.lg + insets.top, paddingBottom: Spacing.sm }}>
+      <T variant="title">Recipes</T>
+      <T color="textMuted" style={{ marginTop: -Spacing.sm }}>
+        Every dish in Sous. Tap one to cook it or add it to your week.
+      </T>
       <Input
         value={q}
         onChangeText={setQ}

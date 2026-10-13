@@ -22,6 +22,8 @@ export type { HistoryEntry } from '@/sync/state';
 
 /** Settings that belong to this device, not the household. */
 export interface Settings {
+  /** Kitchen name on a single-device kitchen (a shared kitchen uses the household's name). */
+  kitchenName?: string;
   notifications: boolean;
   claudeEnabled: boolean;
   hasApiKey: boolean;

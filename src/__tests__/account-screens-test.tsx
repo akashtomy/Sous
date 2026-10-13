@@ -35,6 +35,7 @@ jest.mock('expo-router', () => ({
     return <T>{`redirect:${href}`}</T>;
   },
   router: { replace: jest.fn(), push: jest.fn(), back: jest.fn(), canGoBack: () => false },
+  useLocalSearchParams: () => ({}),
 }));
 
 const press = (label: string) => fireEvent.press(screen.getByRole('button', { name: label }));
@@ -205,13 +206,16 @@ describe('Household screen', () => {
     expect(screen.getByText('All changes saved')).toBeTruthy();
   });
 
-  it('members (not owners) cannot remove people or rename; pending sync is shown', async () => {
-    useAuth.setState({ ...base, household: { ...base.household, role: 'member' } });
+  it('members cannot remove people but can rename the kitchen; pending sync is shown', async () => {
+    const renameHousehold = jest.fn().mockResolvedValue(undefined);
+    useAuth.setState({ ...base, household: { ...base.household, role: 'member' }, renameHousehold });
     useKitchen.setState({ pendingOps: [{ id: '1', type: 'shopping.clear' }] });
     await render(<HouseholdScreen />);
     expect(screen.queryByRole('button', { name: 'Remove' })).toBeNull();
-    expect(screen.queryByText('Kitchen name')).toBeNull();
     expect(screen.getByText('1 change waiting to sync')).toBeTruthy();
+    await fireEvent.changeText(screen.getByLabelText('Kitchen name'), '  Akash & Riya  ');
+    await press('Save');
+    await waitFor(() => expect(renameHousehold).toHaveBeenCalledWith('Akash & Riya'));
   });
 
   it('sends people without a kitchen to setup', async () => {

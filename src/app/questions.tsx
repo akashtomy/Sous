@@ -1,14 +1,27 @@
-import { router } from 'expo-router';
+import { router, Stack, useLocalSearchParams } from 'expo-router';
 import { useState } from 'react';
 import { View } from 'react-native';
 
 import { IngredientSearch } from '@/components/ingredient-picker';
 import { COURSE_LABEL, CUISINE_LABEL } from '@/components/meal';
 import {
+  COURSES,
+  CUISINES,
+  DIET_LABEL,
+  DIETS,
+  EFFORT_LABEL,
+  EFFORTS,
+  MODES,
+  MOODS,
+  toggleIn,
+} from '@/components/pref-options';
+import {
   Button,
+  Card,
   Chip,
   ChipGroup,
   Input,
+  Row,
   Screen,
   Section,
   Stepper,
@@ -17,54 +30,27 @@ import {
 } from '@/components/ui';
 import { ingredientById } from '@/core/catalog';
 import { dayLabel } from '@/core/dates';
-import {
-  planWeek,
-  weekStartDate,
-  type MealMode,
-  type Mood,
-  type Preferences,
-} from '@/core/planner';
-import type { Course, Cuisine, Diet, Effort } from '@/core/types';
+import { planWeek, weekStartDate, type Preferences } from '@/core/planner';
 import { Spacing } from '@/constants/theme';
 import { todayIso, useKitchen } from '@/store/kitchen';
 import { usePlanContext } from '@/store/selectors';
 
-const COURSES: Course[] = ['breakfast', 'lunch', 'dinner', 'dessert', 'snack'];
-const CUISINES: Cuisine[] = ['indian', 'lebanese', 'chinese', 'continental', 'international'];
-const DIETS: { v: Diet; label: string }[] = [
-  { v: 'vegan', label: 'Vegan' },
-  { v: 'veg', label: 'Vegetarian' },
-  { v: 'egg', label: 'Veg + eggs' },
-  { v: 'nonveg', label: 'Non-veg' },
-];
-const EFFORTS: { v: Effort; label: string }[] = [
-  { v: 'quick', label: 'Quick (≤ 20 min)' },
-  { v: 'moderate', label: 'Some effort (≤ 45 min)' },
-  { v: 'elaborate', label: 'Happy to cook' },
-];
-const MOODS: { v: Mood; label: string }[] = [
-  { v: 'any', label: 'Anything' },
-  { v: 'light', label: 'Something light' },
-  { v: 'comfort', label: 'Comfort food' },
-  { v: 'high-protein', label: 'High protein' },
-];
-const MODES: { v: MealMode; label: string }[] = [
-  { v: 'healthy', label: 'Healthy' },
-  { v: 'balanced', label: 'Balanced' },
-  { v: 'cheat', label: 'Cheat meal' },
-];
-
 export default function Questions() {
+  const { scope } = useLocalSearchParams<{ scope?: string }>();
   const saved = useKitchen((s) => s.prefs);
   const setPrefs = useKitchen((s) => s.setPrefs);
   const inventory = useKitchen((s) => s.inventory);
   const setPlan = useKitchen((s) => s.setPlan);
   const ctx = usePlanContext();
-  const [p, setP] = useState<Preferences>(saved);
+  const [p, setP] = useState<Preferences>(() => ({
+    ...saved,
+    scope: scope === 'week' || scope === 'day' ? scope : saved.scope,
+  }));
+  // Set during setup; kept out of the way unless the person wants to change them.
+  const [showHousehold, setShowHousehold] = useState(false);
   const [kcalText, setKcalText] = useState(p.kcalTarget ? String(p.kcalTarget) : '');
   const update = (x: Partial<Preferences>) => setP((cur) => ({ ...cur, ...x }));
-  const toggle = <K,>(list: K[], v: K) =>
-    list.includes(v) ? list.filter((x) => x !== v) : [...list, v];
+  const toggle = toggleIn;
 
   const submit = () => {
     const kcal = Number(kcalText);
@@ -89,6 +75,9 @@ export default function Questions() {
           style={{ flex: 1 }}
         />
       }>
+      <Stack.Screen
+        options={{ title: p.scope === 'week' ? 'Plan your week' : 'What would you like to eat?' }}
+      />
       <Section title="Plan for">
         <ChipGroup>
           <Chip
@@ -119,10 +108,6 @@ export default function Questions() {
             />
           ))}
         </ChipGroup>
-      </Section>
-
-      <Section title="How many people?">
-        <Stepper value={p.people} onChange={(people) => update({ people })} label="people" />
       </Section>
 
       <Section title="Healthy or cheat meal?">
@@ -168,6 +153,33 @@ export default function Questions() {
             />
           ))}
         </ChipGroup>
+      </Section>
+
+      <Section title="Household preferences">
+        <Card onPress={() => setShowHousehold((v) => !v)}>
+          <Row style={{ justifyContent: 'space-between' }}>
+            <T variant="small" color="textMuted" style={{ flex: 1 }}>
+              {[
+                `${p.people} ${p.people === 1 ? 'person' : 'people'}`,
+                DIET_LABEL[p.diet],
+                `Weekdays: ${EFFORT_LABEL[p.maxEffort]}`,
+                p.mealPrep ? `${p.prepDay === 'saturday' ? 'Saturday' : 'Sunday'} prep` : 'No weekend prep',
+                p.avoid.length ? `Avoid ${p.avoid.length}` : null,
+              ]
+                .filter(Boolean)
+                .join(' · ')}
+            </T>
+            <Chip
+              label={showHousehold ? 'Done' : 'Edit'}
+              icon={showHousehold ? 'chevron-up' : 'create-outline'}
+            />
+          </Row>
+        </Card>
+      </Section>
+      {showHousehold ? (
+        <>
+      <Section title="How many people?">
+        <Stepper value={p.people} onChange={(people) => update({ people })} label="people" />
       </Section>
 
       <Section title="Weekday cooking time">
@@ -290,6 +302,8 @@ export default function Questions() {
           onChange={(usePerishables) => update({ usePerishables })}
         />
       </View>
+        </>
+      ) : null}
     </Screen>
   );
 }

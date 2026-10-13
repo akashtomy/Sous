@@ -23,14 +23,15 @@ export default function TabLayout() {
   if (status === 'loading' || (status === 'signedIn' && !householdLoaded)) {
     return <Loading text="Signing you in…" />;
   }
-  if (status === 'signedOut') return <Redirect href="/login" />;
+  if (status === 'signedOut') return <Redirect href="/welcome" />;
   if (status === 'signedIn') {
     if (recovering) return <Redirect href="/reset-password" />;
     if (!household) return <Redirect href="/household-setup" />;
     // A partner's phone has no cache yet: wait for the kitchen instead of showing setup.
     if (!onboarded && !synced) return <Loading text="Loading your kitchen…" />;
   }
-  if (!onboarded) return <Redirect href="/onboarding" />;
+  // Without accounts the welcome page leads into setup.
+  if (!onboarded) return <Redirect href={status === 'disabled' ? '/welcome' : '/onboarding'} />;
 
   return (
     <Tabs
@@ -41,6 +42,8 @@ export default function TabLayout() {
         headerStyle: { backgroundColor: theme.background },
         headerTitleStyle: { color: theme.text },
         headerShadowVisible: false,
+        // Each tab draws its own title (with the kitchen name), so no navigation header.
+        headerShown: false,
       }}>
       <Tabs.Screen
         name="index"
@@ -89,9 +92,6 @@ export default function TabLayout() {
           ),
         }}
       />
-      {/* Reached from Kitchen / Today / Plan and from You, not from the tab bar. */}
-      <Tabs.Screen name="shopping" options={{ title: 'Shopping list', href: null }} />
-      <Tabs.Screen name="settings" options={{ title: 'Settings', href: null }} />
     </Tabs>
   );
 }

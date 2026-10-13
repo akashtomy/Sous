@@ -1,8 +1,11 @@
-import { router } from 'expo-router';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import { router, type Href } from 'expo-router';
 import { useMemo, useState } from 'react';
-import { View } from 'react-native';
+import { Pressable, View } from 'react-native';
 
-import { COURSE_LABEL, CUISINE_LABEL, MealCard } from '@/components/meal';
+import { KitchenTitle } from '@/components/kitchen-title';
+import { COURSE_LABEL, MealCard } from '@/components/meal';
+import { DIET_LABEL, EFFORT_LABEL, MODE_LABEL } from '@/components/pref-options';
 import {
   Banner,
   Button,
@@ -14,27 +17,23 @@ import {
   Screen,
   Section,
   T,
+  type IconName,
 } from '@/components/ui';
+import { Radius, Spacing } from '@/constants/theme';
 import { ingredientById, recipeById } from '@/core/catalog';
 import { ClaudeIdeasError, generateIdeas } from '@/core/claude';
-import { addDays, isWeekend } from '@/core/dates';
+import { addDays, dayName, isWeekend } from '@/core/dates';
 import { daysBetween } from '@/core/inventory';
+import { isForTomorrow, mealsByTimeOfDay } from '@/core/meal-time';
 import { effortLimit, suggest } from '@/core/planner';
 import type { Course } from '@/core/types';
+import { useTheme } from '@/hooks/use-theme';
 import { getApiKey } from '@/lib/secrets';
 import { todayIso, useKitchen } from '@/store/kitchen';
 import { useExpiring, usePlanContext, useRefillList } from '@/store/selectors';
 
-const MODE_LABEL = { healthy: 'Healthy', balanced: 'Balanced', cheat: 'Cheat meal' } as const;
-const EFFORT_LABEL = {
-  quick: 'Quick (≤ 20 min)',
-  moderate: 'Up to 45 min',
-  elaborate: 'Any effort',
-} as const;
-
-function greeting() {
-  const h = new Date().getHours();
-  return h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening';
+function greeting(hour: number) {
+  return hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening';
 }
 
 export default function Today() {
@@ -48,15 +47,18 @@ export default function Today() {
   const plan = useKitchen((s) => s.plan);
   const settings = useKitchen((s) => s.settings);
   const saveAi = useKitchen((s) => s.saveAiRecipes);
+  const theme = useTheme();
   const refill = useRefillList();
   const expiring = useExpiring();
   const today = todayIso();
+  const hour = new Date().getHours();
   const ctx = usePlanContext(today);
   const [expanded, setExpanded] = useState<Partial<Record<Course, boolean>>>({});
   const [aiBusy, setAiBusy] = useState<Course | null>(null);
   const [aiError, setAiError] = useState<string | null>(null);
   const [lastAi, setLastAi] = useState<Partial<Record<Course, string[]>>>({});
 
+  const meals = mealsByTimeOfDay(prefs.meals, hour);
   const byCourse = useMemo(
     () =>
       Object.fromEntries(
@@ -69,8 +71,13 @@ export default function Today() {
   const toRateRecipe = toRate ? recipeById(toRate.recipeId, ai) : undefined;
 
   const planDay = plan ? daysBetween(plan.startDate, today) : -1;
-  const todaysPlan =
-    plan && planDay >= 0 && planDay < plan.days.length ? plan.days[planDay] : undefined;
+  const planActive = !!plan && planDay >= 0 && planDay < plan.days.length;
+  // A plan that starts on the coming prep day.
+  const planUpcoming = !!plan && planDay < 0;
+  const todaysPlan = planActive ? plan.days[planDay] : undefined;
+  const planLeft = planActive
+    ? plan.days.slice(planDay).flat().filter((s) => !s.cookedEntryId && !s.eatOutId).length
+    : 0;
 
   const open = (id: string, extra: Record<string, string> = {}) =>
     router.push({
@@ -100,39 +107,43 @@ export default function Today() {
     }
   };
 
+  const weekend = isWeekend(today);
   const summary = [
-    `${prefs.people} ${prefs.people === 1 ? 'person' : 'people'}`,
+    `For ${prefs.people}`,
+    DIET_LABEL[prefs.diet],
     MODE_LABEL[prefs.mode],
-    prefs.cuisines.length ? prefs.cuisines.map((c) => CUISINE_LABEL[c]).join(', ') : 'Any cuisine',
-    `${isWeekend(today) ? 'Weekend' : 'Weekday'}: ${EFFORT_LABEL[effortLimit(prefs, today)]}${
-      prefs.mealPrep && !isWeekend(today) ? ' with weekend prep' : ''
-    }`,
+    `${weekend ? 'Weekend' : 'Weekday'}: ${EFFORT_LABEL[effortLimit(prefs, today)]}`,
   ].join(' · ');
 
   return (
-    <Screen>
-      <View style={{ gap: 2 }}>
-        <T variant="title">{greeting()}</T>
-        <T color="textMuted">Here’s what you can cook from your kitchen.</T>
-      </View>
+    <Screen safeTop>
+      <KitchenTitle title={greeting(hour)} />
 
-      <Card onPress={() => router.push('/questions')}>
-        <Row style={{ justifyContent: 'space-between' }}>
-          <View style={{ flex: 1 }}>
-            <T variant="label">What would you like to eat?</T>
-            <T variant="small" color="textMuted">
-              {summary}
-            </T>
-          </View>
-          <Chip label="Change" icon="options-outline" />
-        </Row>
-      </Card>
+      <Row gap={Spacing.sm}>
+        <QuickAction
+          icon="calendar-outline"
+          label={planActive || planUpcoming ? 'Week plan' : 'Plan week'}
+          href={
+            planActive || planUpcoming
+              ? '/plan'
+              : { pathname: '/questions', params: { scope: 'week' } }
+          }
+        />
+        <QuickAction icon="bag-add-outline" label="Groceries" href="/inventory" />
+        <QuickAction
+          icon="cart-outline"
+          label="Shopping"
+          href="/shopping"
+          badge={refill.length || undefined}
+        />
+        <QuickAction icon="storefront-outline" label="Ate out" href="/eat-out" />
+      </Row>
 
       {toRateRecipe ? (
         <Card>
           <T variant="label">How was the {toRateRecipe.name}?</T>
           <T variant="small" color="textMuted">
-            Your answers shape what we suggest next.
+            Your answers shape what Sous suggests next.
           </T>
           <ChipGroup>
             <Chip icon="heart" label="Loved it" onPress={() => rate(toRateRecipe.id, 'love')} />
@@ -150,22 +161,76 @@ export default function Today() {
         </Card>
       ) : null}
 
-      {refill.length ? (
-        <Banner
-          icon="cart-outline"
-          tone="accent"
-          title={`${refill.length} item${refill.length === 1 ? '' : 's'} to refill`}
-          body={
-            refill
-              .slice(0, 4)
-              .map((r) => r.name)
-              .join(', ') + (refill.length > 4 ? '…' : '')
-          }
+      {todaysPlan?.length ? (
+        <Section
+          title="Today’s plan"
           action={
-            <Button title="View" small kind="secondary" onPress={() => router.push('/shopping')} />
-          }
-        />
-      ) : null}
+            <Button
+              title={`${planLeft} left this week`}
+              kind="ghost"
+              small
+              onPress={() => router.push('/plan')}
+            />
+          }>
+          {todaysPlan.map((slot) => {
+            const r = recipeById(slot.recipeId, ai);
+            if (!r) return null;
+            return (
+              <MealCard
+                key={slot.course}
+                recipe={r}
+                servings={slot.servings}
+                reason={`${COURSE_LABEL[slot.course]}${
+                  slot.cookedEntryId ? ' · cooked ✓' : slot.eatOutId ? ' · ate out' : ''
+                }`}
+                onPress={() =>
+                  open(r.id, {
+                    servings: String(slot.servings),
+                    day: String(planDay),
+                    course: slot.course,
+                  })
+                }
+              />
+            );
+          })}
+        </Section>
+      ) : planUpcoming ? (
+        <Card onPress={() => router.push('/plan')}>
+          <Row gap={Spacing.md}>
+            <Ionicons name="calendar" size={28} color={theme.primary} />
+            <View style={{ flex: 1, gap: 2 }}>
+              <T variant="heading">Your week starts {dayName(plan.startDate, 'long')}</T>
+              <T variant="small" color="textMuted">
+                {plan.prefs.mealPrep
+                  ? 'Your prep list and shopping list are ready.'
+                  : 'Your shopping list is ready.'}{' '}
+                Until then, pick from the ideas below.
+              </T>
+            </View>
+            <Ionicons name="chevron-forward" size={20} color={theme.textMuted} />
+          </Row>
+        </Card>
+      ) : (
+        <Card>
+          <Row gap={Spacing.md} style={{ alignItems: 'flex-start' }}>
+            <Ionicons name="calendar" size={28} color={theme.primary} />
+            <View style={{ flex: 1, gap: 2 }}>
+              <T variant="heading">{plan ? 'Plan the next week' : 'Plan your week'}</T>
+              <T variant="small" color="textMuted">
+                Seven days of meals from what you have
+                {prefs.mealPrep ? ', with a weekend prep list that makes weekdays quick' : ''}. Takes
+                a minute.
+              </T>
+            </View>
+          </Row>
+          <Button
+            title="Plan my week"
+            icon="sparkles"
+            onPress={() => router.push({ pathname: '/questions', params: { scope: 'week' } })}
+          />
+        </Card>
+      )}
+
       {expiring.length ? (
         <Banner
           icon="hourglass-outline"
@@ -186,43 +251,28 @@ export default function Today() {
         />
       ) : null}
 
-      {todaysPlan?.length ? (
-        <Section
-          title="From your week plan"
-          action={
-            <Button title="Open plan" kind="ghost" small onPress={() => router.push('/plan')} />
-          }>
-          {todaysPlan.map((slot) => {
-            const r = recipeById(slot.recipeId, ai);
-            if (!r) return null;
-            return (
-              <MealCard
-                key={slot.course}
-                recipe={r}
-                servings={slot.servings}
-                reason={`${COURSE_LABEL[slot.course]}${slot.cookedEntryId ? ' · cooked ✓' : ''}`}
-                onPress={() =>
-                  open(r.id, {
-                    servings: String(slot.servings),
-                    day: String(planDay),
-                    course: slot.course,
-                  })
-                }
-              />
-            );
-          })}
-        </Section>
-      ) : null}
+      <Card onPress={() => router.push({ pathname: '/questions', params: { scope: 'day' } })}>
+        <Row style={{ justifyContent: 'space-between' }}>
+          <View style={{ flex: 1 }}>
+            <T variant="label">Ideas from your kitchen</T>
+            <T variant="small" color="textMuted">
+              {summary}
+            </T>
+          </View>
+          <Chip label="Change" icon="options-outline" />
+        </Row>
+      </Card>
 
-      {prefs.meals.map((course) => {
+      {meals.map((course, i) => {
         const aiIds = lastAi[course] ?? [];
         const list = (byCourse[course] ?? []).filter((s) => !aiIds.includes(s.recipe.id));
-        const shown = expanded[course] ? list : list.slice(0, 3);
+        const shown = expanded[course] ? list : list.slice(0, i === 0 ? 3 : 2);
         const aiShown = aiIds.map((id) => ai.find((r) => r.id === id)).filter((r) => !!r);
+        const tomorrow = isForTomorrow(course, hour);
         return (
           <Section
             key={course}
-            title={COURSE_LABEL[course]}
+            title={`${i === 0 ? 'Next up: ' : ''}${COURSE_LABEL[course]}${tomorrow ? ' (tomorrow)' : ''}`}
             action={
               <IconButton
                 icon="shuffle"
@@ -244,8 +294,7 @@ export default function Today() {
               ))
             ) : (
               <T color="textMuted">
-                Nothing matches these answers. Try more effort, another cuisine, or a different
-                diet.
+                Nothing matches these answers. Try more time, another cuisine, or add groceries.
               </T>
             )}
             {aiShown.map((r) => (
@@ -257,9 +306,9 @@ export default function Today() {
               />
             ))}
             <ChipGroup>
-              {list.length > 3 ? (
+              {list.length > shown.length || expanded[course] ? (
                 <Chip
-                  label={expanded[course] ? 'Show fewer' : `Show ${list.length - 3} more`}
+                  label={expanded[course] ? 'Show fewer' : `Show ${list.length - shown.length} more`}
                   onPress={() => setExpanded((e) => ({ ...e, [course]: !e[course] }))}
                 />
               ) : null}
@@ -280,5 +329,64 @@ export default function Today() {
         );
       })}
     </Screen>
+  );
+}
+
+function QuickAction({
+  icon,
+  label,
+  href,
+  badge,
+}: {
+  icon: IconName;
+  label: string;
+  href: Href;
+  badge?: number;
+}) {
+  const theme = useTheme();
+  return (
+    <Pressable
+      onPress={() => router.push(href)}
+      accessibilityRole="button"
+      accessibilityLabel={badge ? `${label}, ${badge} items` : label}
+      style={({ pressed }) => [
+        {
+          flex: 1,
+          alignItems: 'center',
+          gap: 6,
+          paddingVertical: Spacing.md,
+          borderRadius: Radius.lg,
+          backgroundColor: theme.card,
+          borderWidth: 1,
+          borderColor: theme.border,
+        },
+        pressed && { opacity: 0.8 },
+      ]}>
+      <View>
+        <Ionicons name={icon} size={24} color={theme.primary} />
+        {badge ? (
+          <View
+            style={{
+              position: 'absolute',
+              top: -6,
+              right: -12,
+              minWidth: 18,
+              height: 18,
+              paddingHorizontal: 4,
+              borderRadius: 9,
+              backgroundColor: theme.accent,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <T variant="caption" style={{ color: theme.onPrimary, fontSize: 11, lineHeight: 14 }}>
+              {badge > 99 ? '99+' : badge}
+            </T>
+          </View>
+        ) : null}
+      </View>
+      <T variant="caption" numberOfLines={1}>
+        {label}
+      </T>
+    </Pressable>
   );
 }

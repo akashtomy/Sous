@@ -76,7 +76,6 @@ export default function ShoppingScreen() {
       }>
       <Row style={{ justifyContent: 'space-between' }}>
         <View style={{ flex: 1 }}>
-          <T variant="title">Shopping list</T>
           <T color="textMuted">
             {selected.length} of {list.length} selected · rounded to pack sizes
           </T>
